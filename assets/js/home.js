@@ -27,9 +27,7 @@ $(document).ready(function () {
     //language
     $(document).on("click",".title-lang",function () {
         $(".languages").toggleClass("d-none");
-        // $(document).on("click",".title-currency", function () {
-        //     $(".languages").toggleClass("d-none")
-        // })
+        
     })
 
     $(document).on("click",".item",function(){

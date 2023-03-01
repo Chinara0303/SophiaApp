@@ -1,0 +1,33 @@
+@media (max-width:960px){
+    #top{
+        .top-area{
+            justify-content: center !important;
+            .lang{
+                margin-left: 15px;
+            }
+        }
+    }
+    #center{
+        .center-area{
+            text-align: center;
+            .search-area{
+                margin: 20px 0;
+                .search{
+                    height: 40px;
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+            .rigth-area{
+                justify-content: center !important;
+            }
+        }
+    }
+}
+
+
+@media (min-width:600px){
+    .top-right{
+        display: block !important;
+    } 
+}
