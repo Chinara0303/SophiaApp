@@ -12,9 +12,39 @@
 
 <body>
     <header>
+        <div class="overlay"></div>
         <section id="top">
             <div class="container">
                 <div class="top-area d-flex align-items-center justify-content-between">
+                    <i class="fa-solid d-lg-none open-icon fa-bars"></i>
+                    <div class="menu d-lg-none">
+                        <i class="fa-solid fa-xmark close-icon"></i>
+                        <div class="line"></div>
+                        <ul class="menues">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li class="last-menu  d-flex align-items-center justify-content-between"><a class="" href="">Pages </a>
+                               <i class="fa-solid fa-chevron-down"></i>
+                                <div class="sub-menu d-none">
+                                    <ul>
+                                        <li><a href="">About us</a></li>
+                                        <li><a href="">FAQ</a></li>
+                                        <li><a href="">Contact</a></li>
+                                        <li><a href="">Wishlist</a></li>
+                                        <li><a href="">Testimonials </a></li>
+                                        <li><a href="">Compare</a></li>
+                                        <li><a href="">Checkout</a></li>
+                                        <li><a href="">Cart</a></li>
+                                        <li><a href="">My Account</a></li>
+                                        <li><a href="">404</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
                     <div class="top-left">
                         <div class="select">
                             <div class="title-currency d-flex align-items-center">
@@ -22,8 +52,12 @@
                                 <i class="fa-solid fa-caret-down ms-2"></i>
                             </div>
                             <div class="currency d-none">
-                                <button class="usd-btn"><p>USD</p></button>
-                                <button class="eur-btn"><p>EUR</p></button>
+                                <button class="usd-btn">
+                                    <p>USD</p>
+                                </button>
+                                <button class="eur-btn">
+                                    <p>EUR</p>
+                                </button>
                             </div>
                         </div>
                         <div class="lang">
@@ -81,7 +115,7 @@
                                     <input type="text" placeholder="Type to search...">
                                     <button>Search</button>
                                 </div>
-                               
+
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-12 col-md-12">
@@ -103,9 +137,35 @@
                             </div>
                         </div>
                     </div>
-                   
-                   
-                   
+                </div>
+            </div>
+        </section>
+        <section id="bottom" class="d-none d-lg-block">
+            <div class="container">
+                <div class="bottom-area">
+                    <ul class="menues d-flex align-items-center justify-content-between">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li class="last-menu"><a href="">Pages <i class="fa-solid fa-caret-down ms-2"></i></a>
+                            <div class="sub-menu d-none">
+                                <ul>
+                                    <li><a href="">About us</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                    <li><a href="">Contact</a></li>
+                                    <li><a href="">Wishlist</a></li>
+                                    <li><a href="">Testimonials <span>NEW</span> </a></li>
+                                    <li><a href="">Compare</a></li>
+                                    <li><a href="">Checkout</a></li>
+                                    <li><a href="">Cart</a></li>
+                                    <li><a href="">My Account</a></li>
+                                    <li><a href="">404</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
         </section>

@@ -1,6 +1,10 @@
 $nativeColor: #EF6C00;
 $font-family: Roboto, Arial, Helvetica, sans-serif;
 
+@mixin dashBorder {
+    border-bottom: 1px dashed #f6f6f6;
+}
+
 p {
     margin: 0 !important;
     padding: 0 !important;
@@ -16,7 +20,19 @@ ul {
 a {
     text-decoration: none;
 }
-
+.overlay{
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
 #top {
     user-select: none;
     font-family: $font-family;
@@ -24,6 +40,94 @@ a {
     padding: 20px 0;
 
     .top-area {
+        position: relative;
+
+        .open-icon {
+            position: absolute;
+            left: 6px;
+            color: $nativeColor;
+            cursor: pointer;
+            opacity: 1.5;
+            font-size: 20px;
+
+        }
+
+        .active-menu {
+            transform: translate(0) !important;
+        }
+        
+        .menu {
+            background-color: white;
+            position: absolute;
+            top: -19px;
+            left: -13px;
+            width: 250px;
+            height: 100vh;
+            z-index: 11;
+            transform: translate(-260px);
+            transition: all .7s;
+            .close-icon {
+                font-size: 24px;
+                color: #f44336;
+                margin: 20px 0 20px 20px;
+                cursor: pointer;
+            }
+
+            .line {
+                border-bottom: 1px solid #c3c3c3;
+                margin: 0 10px 0 10px;
+            }
+
+            .menues {
+                li {
+                    width: 100%;
+
+                    a {
+                        font-size: 15px !important;
+                        text-transform: capitalize !important;
+                        color: #111111b2;
+                        font-weight: 500 !important;
+
+                        span {
+                            background-color: $nativeColor;
+                            color: white;
+                            padding: 3px;
+                            font-size: 8px;
+                        }
+                    }
+
+                    &:hover {
+
+                        background-color: transparent !important;
+                    }
+                }
+
+                .last-menu {
+                    i {
+                        display: inline;
+                        margin-left: 112px !important;
+                        font-size: 12px;
+                    }
+                }
+
+                .sub-menu {
+                    position: absolute;
+                    top: 60px;
+
+                    ul {
+                        margin-left: 10px;
+                    }
+
+                    li {
+                        padding: 0 !important;
+                        margin-top: 10px;
+
+                    }
+                }
+            }
+
+        }
+
         .top-left {
             display: flex;
             align-items: center;
@@ -81,7 +185,7 @@ a {
                         width: 100%;
                         height: 50px;
                         transition: all .4s;
-                        border-bottom: 1px dashed #f6f6f6;
+                        @include dashBorder;
 
                         p {
                             font-size: 11px;
@@ -130,7 +234,7 @@ a {
                     width: 213px;
                     padding: 10px;
                     position: absolute;
-                    top: 50px;
+                    top: 33px;
                     left: 126px;
                     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
                     border-radius: 4px;
@@ -150,7 +254,7 @@ a {
                         display: flex;
                         align-items: center;
                         height: 45px;
-                        border-bottom: 1px dashed #f6f6f6;
+                        @include dashBorder;
                         cursor: pointer;
 
                         &:hover {
@@ -201,9 +305,10 @@ a {
 
     .center-area {
         padding: 20px 0;
-     
+
         .search-area {
             margin-left: 30px;
+
             .search {
                 background-color: white;
                 width: 100%;
@@ -238,7 +343,7 @@ a {
             color: white;
 
             .callback {
-                 margin-left: 20px;
+                margin-left: 20px;
             }
 
 
@@ -264,7 +369,8 @@ a {
             .shopping-cart {
                 position: relative;
                 cursor: pointer;
-                &:hover{
+
+                &:hover {
                     background-color: #222222;
                 }
 
@@ -279,7 +385,8 @@ a {
                     font-size: 12px;
                     font-weight: bold;
                 }
-                .product-count{
+
+                .product-count {
                     position: absolute;
                     background-color: #222222;
                     color: white;
@@ -289,7 +396,7 @@ a {
                     border-radius: 50%;
                     bottom: 21px;
                     left: 20px;
-                    
+
                 }
             }
 
@@ -297,4 +404,82 @@ a {
         }
 
     }
+}
+
+#bottom {
+    font-family: $font-family;
+    background-color: #F5F7F8;
+    user-select: none;
+
+    .sub-menu {
+        box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
+        background-color: white;
+        width: 200px;
+        position: absolute;
+        top: 56px;
+        left: -17px;
+        border-radius: 4px;
+        border-top: 4px solid #c3c3c3;
+
+        ul {
+            margin-top: 15px;
+
+            li {
+                @include dashBorder;
+                cursor: pointer;
+                height: 40px;
+
+                a {
+                    font-size: 12px;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                    color: rgba(0, 0, 0, .87);
+                    text-transform: none;
+
+                    span {
+                        background-color: $nativeColor;
+                        color: white;
+                        padding: 3px;
+                        font-size: 8px;
+                    }
+
+                }
+
+                &:hover {
+
+                    background: rgba(0, 0, 0, .04);
+                }
+            }
+        }
+    }
+}
+
+.menues {
+    width: 50%;
+
+    li {
+        padding: 16px 20px;
+        cursor: pointer;
+
+        a {
+            font-size: 14px;
+            color: #383838;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+
+            i {}
+        }
+
+        &:hover {
+
+            background: rgba(0, 0, 0, .04);
+        }
+    }
+
+    .last-menu {
+        position: relative;
+    }
+
+
 }

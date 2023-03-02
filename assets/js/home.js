@@ -2,9 +2,7 @@ $(document).ready(function () {
     //currency
     $(document).on("click",".title-currency", function () {
         $(".currency").toggleClass("d-none");
-    //   $(document).on("click",".title-lang",function () {
-    //         $(".currency").toggleClass("d-none");
-    //     })
+        // $(".languages").toggleClass("d-none");
     })
 
     $(".eur-btn").click(function () {
@@ -17,17 +15,11 @@ $(document).ready(function () {
         $(this).parent().prev().children().eq(0).text(text);
         $(".currency").addClass("d-none")
     })
-    // $("body").click(function () {
-    //     console.log(!$(".currency").hasClass("d-none"));
-    //     if (!$(".currency").hasClass("d-none")) {
-    //         $(".currency").addClass("d-none")
-    //     }
-    // })
 
     //language
     $(document).on("click",".title-lang",function () {
         $(".languages").toggleClass("d-none");
-        
+        // $(".currency").toggleClass("d-none");
     })
 
     $(document).on("click",".item",function(){
@@ -38,4 +30,23 @@ $(document).ready(function () {
        $(".languages").toggleClass("d-none");
     })
 
+    //submenu
+    $(document).on("click",".last-menu",function(e){
+        e.preventDefault();
+        $(".sub-menu").toggleClass("d-none")
+    })
+
+    //phone-menu
+    $(document).on("click",".open-icon",function(){
+        $(".menu").addClass("active-menu");
+        $(".overlay").css("display","block")
+    })
+    $(document).on("click",".close-icon",function(){
+        $(".menu").removeClass("active-menu");
+        $(".overlay").css("display","none");
+    })
+    $(document).on("click",".overlay",function(){
+        $(".menu").removeClass("active-menu");
+        $(".overlay").css("display","none");
+    })
 })
