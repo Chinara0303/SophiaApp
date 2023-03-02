@@ -1,33 +1,131 @@
-@media (max-width:960px){
-    #top{
-        .top-area{
-            justify-content: center !important;
-            .lang{
-                margin-left: 15px;
+@media (min-width:576px) and (max-width:992px) {
+    #top {
+        .top-right {
+            display: block !important;
+        }
+
+        .top-area {
+            .open-icon {
+                left: -91px;
+            }
+
+            .menu {
+                left: -110px !important;
             }
         }
+
     }
-    #center{
-        .center-area{
+
+    #center {
+        .center-area {
             text-align: center;
-            .search-area{
+
+            .search-area {
                 margin: 20px 0;
-                .search{
+
+                .search {
                     height: 40px;
                     width: 90%;
                     margin: 0 auto;
                 }
             }
-            .rigth-area{
-                justify-content: center !important;
+
+            .rigth-area {
+                justify-content: space-around !important;
             }
         }
     }
+
+    #intro-slider {
+        .slider {
+            padding: 100px !important;
+
+            h1 {
+                font-size: 30px !important;
+
+            }
+
+            h3 {
+                font-size: 24px !important;
+            }
+
+        }
+    }
+
+    #info {
+        .box {
+            justify-content: flex-start !important;
+            margin-top: 20px !important;
+        }
+
+        .shipping {
+            border-right: none !important;
+        }
+    }
+
 }
 
 
-@media (min-width:600px){
-    .top-right{
-        display: block !important;
-    } 
+@media (max-width:576px) {
+    .top-right {
+        display: none !important;
+    }
+
+    #top {
+        .top-area {
+            justify-content: center !important;
+
+            .lang {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    #intro-slider {
+        .slider {
+            padding: 30px !important;
+
+            h1 {
+                font-size: 30px !important;
+
+            }
+
+            h3 {
+                font-size: 24px !important;
+            }
+
+        }
+    }
+
+    #center {
+        .center-area {
+            text-align: center;
+
+            .search-area {
+                margin: 20px 0;
+
+                .search {
+                    height: 40px;
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+
+            .rigth-area {
+                justify-content: space-around !important;
+            }
+        }
+    }
+
+    #info {
+        .box {
+            border-right: none !important;
+            justify-content: flex-start !important;
+            .icon {
+                i {
+                    font-size: 30px !important;
+                }
+            }
+        }
+    }
 }

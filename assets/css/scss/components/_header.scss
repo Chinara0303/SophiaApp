@@ -1,25 +1,5 @@
-$nativeColor: #EF6C00;
-$font-family: Roboto, Arial, Helvetica, sans-serif;
-
-@mixin dashBorder {
-    border-bottom: 1px dashed #f6f6f6;
-}
-
-p {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
+@import '../partials/mixins';
+@import '../partials/variables';
 .overlay{
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
@@ -35,7 +15,7 @@ a {
 }
 #top {
     user-select: none;
-    font-family: $font-family;
+    font-family: $fontFamily;
     background-color: #222222;
     padding: 20px 0;
 
@@ -64,7 +44,7 @@ a {
             width: 250px;
             height: 100vh;
             z-index: 11;
-            transform: translate(-260px);
+            transform: translate(-1000px);
             transition: all .7s;
             .close-icon {
                 font-size: 24px;
@@ -407,11 +387,12 @@ a {
 }
 
 #bottom {
-    font-family: $font-family;
+    font-family: $fontFamily;
     background-color: #F5F7F8;
     user-select: none;
 
     .sub-menu {
+        z-index:1;
         box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
         background-color: white;
         width: 200px;
@@ -468,7 +449,7 @@ a {
             font-weight: 600;
             cursor: pointer;
 
-            i {}
+         
         }
 
         &:hover {
