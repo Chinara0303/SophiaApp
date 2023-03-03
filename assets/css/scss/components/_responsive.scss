@@ -103,6 +103,21 @@
             
         }
     }
+    #vertical-products{
+        .box{
+            margin-bottom: 20px !important;
+            .box-content{
+                .img-area{
+                    width: 50% !important;
+                }
+                .info{
+                    span{
+                        font-size: 16px !important;
+                    }
+                }
+            }
+        }
+    }
 
 }
 
@@ -181,7 +196,7 @@
 
     #banners{
         .banner-left{
-            margin-bottom:170px ;
+            margin-bottom:205px !important ;
         }
         .banner-right{
             display: flex;
@@ -200,11 +215,24 @@
             }
             .banner-right-bottom{
                 margin-bottom: 10px !important;
+                background-size: 130%;
+
                 .text{
                     width: 58% !important;
                 }
             }
             
+        }
+    }
+    #vertical-products{
+        .box{
+            margin-bottom: 20px !important;
+            .box-content{
+                .img-area{
+                    width: 16% !important;
+                    
+                }
+            }
         }
     }
 }
