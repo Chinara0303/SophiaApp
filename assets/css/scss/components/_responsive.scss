@@ -63,14 +63,51 @@
         }
     }
 
+    #products {
+        .tab-menu-link {
+
+            width: 100% !important;
+        }
+        .cart{
+            .info{
+                h4{
+                    font-size: 15px !important;
+                }
+            }
+         
+        }
+    }
+    #banners{
+        .banner-right{
+            flex-direction: row-reverse !important;
+            margin-top: 10px !important;
+            .banner-right-top{
+                display: block !important;
+                margin-left: 10px;
+               .banner-right-top-left{
+                width: 100% !important;
+               }
+               .banner-right-top-right{
+                width: 100% !important;
+                margin-left: 0px !important;
+                margin-top: 10px;
+               }
+            }
+            .banner-right-bottom{
+                height: 374px;
+                background-size: 124%;
+                .text{
+                    width: 58% !important;
+                }
+            }
+            
+        }
+    }
+
 }
 
 
 @media (max-width:576px) {
-    .top-right {
-        display: none !important;
-    }
-
     #top {
         .top-area {
             justify-content: center !important;
@@ -78,6 +115,9 @@
             .lang {
                 margin-left: 15px;
             }
+        }
+        .top-right {
+            display: none !important;
         }
     }
 
@@ -121,11 +161,50 @@
         .box {
             border-right: none !important;
             justify-content: flex-start !important;
+
             .icon {
                 i {
                     font-size: 30px !important;
                 }
             }
+        }
+    }
+
+    #products {
+        .tab-menu-link {
+
+            width: 100% !important;
+            margin: 0 10px;
+        }
+      
+    }
+
+    #banners{
+        .banner-left{
+            margin-bottom:170px ;
+        }
+        .banner-right{
+            display: flex;
+            flex-direction: column-reverse !important;
+           
+            .banner-right-top{
+                display: block !important;
+               .banner-right-top-left{
+                width: 100% !important;
+               }
+               .banner-right-top-right{
+                width: 100% !important;
+                margin-left: 0px !important;
+                margin-top: 10px;
+               }
+            }
+            .banner-right-bottom{
+                margin-bottom: 10px !important;
+                .text{
+                    width: 58% !important;
+                }
+            }
+            
         }
     }
 }

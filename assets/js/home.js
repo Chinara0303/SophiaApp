@@ -2,7 +2,7 @@ $(document).ready(function () {
     //currency
     $(document).on("click", ".title-currency", function () {
         $(".currency").toggleClass("d-none");
-        // $(".languages").toggleClass("d-none");
+         $(".languages").addClass("d-none");
     })
 
     $(".eur-btn").click(function () {
@@ -19,7 +19,7 @@ $(document).ready(function () {
     //language
     $(document).on("click", ".title-lang", function () {
         $(".languages").toggleClass("d-none");
-        // $(".currency").toggleClass("d-none");
+        $(".currency").addClass("d-none");
     })
     $(document).on("click", "main", function () {
         if (!$(".sub-menu").hasClass("d-none")) {
@@ -55,11 +55,71 @@ $(document).ready(function () {
         $(".menu").removeClass("active-menu");
         $(".overlay").css("display", "none");
     })
-    //slider
+
+    //slider intro
 
     $('.slider-intro').slick({
         dots: true,
         autoplay: true,
-        autoplaySpeed: 3000
+        autoplaySpeed: 3000,
+        arrows:false,
     });
+
+    //products slider
+    $('.cards').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows:true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
 });
+
+
+const tabLink = document.querySelectorAll(".tab-menu-link");
+const tabContent = document.querySelectorAll(".tab-bar-content");
+
+tabLink.forEach((item) => {
+  item.addEventListener("click", activeTab);
+});
+
+function activeTab(item) {
+  const btnTarget = item.currentTarget;
+  const content = btnTarget.dataset.content;
+
+  tabContent.forEach((item) => {
+    item.classList.remove("is-active");
+  });
+
+  tabLink.forEach((item) => {
+    item.classList.remove("is-active");
+  });
+ document.querySelector("#" + content).classList.add("is-active");
+  btnTarget.classList.add("is-active");
+}
