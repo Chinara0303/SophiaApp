@@ -450,6 +450,10 @@
   #vertical-products .box .box-content .info span {
     font-size: 16px !important;
   }
+  .product-modal .modal-area {
+    overflow-y: scroll !important;
+    display: block !important;
+  }
 }
 @media (max-width: 576px) {
   #top .top-area {
@@ -494,6 +498,17 @@
   #products .tab-menu-link {
     width: 100% !important;
     margin: 0 10px;
+  }
+  .product-modal {
+    left: 5% !important;
+    width: 90% !important;
+  }
+  .product-modal .modal-area {
+    overflow-y: scroll !important;
+    display: block !important;
+  }
+  .product-modal .modal-area .img {
+    text-align: center !important;
   }
   #banners .banner-left {
     margin-bottom: 205px !important;
@@ -694,6 +709,110 @@ a {
 }
 #products .tab .tab-bar .tab-bar-content.is-active {
   display: block;
+}
+
+.product-modal {
+  width: 65%;
+  position: absolute;
+  top: 130%;
+  left: 22%;
+  z-index: 2;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+.product-modal .modal-area .close-icon {
+  position: absolute;
+  top: -25px;
+  right: -22px;
+  background-color: #EF6C00;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+.product-modal .modal-area .information {
+  padding: 18px;
+}
+.product-modal .modal-area .information h2 {
+  font-size: 40px;
+}
+.product-modal .modal-area .information .prices .discount del {
+  font-size: 25px;
+  margin-right: 10px;
+  font-weight: 500;
+}
+.product-modal .modal-area .information .prices .discount p {
+  font-size: 28px;
+  color: #f33927;
+  font-weight: 500;
+}
+.product-modal .modal-area .information .prices .native-price {
+  color: black;
+  margin: 10px 0;
+}
+.product-modal .modal-area .information .prices .native-price span {
+  font-size: 25px;
+}
+.product-modal .modal-area .information .prices .native-price span:nth-child(1) {
+  margin-right: -5px;
+}
+.product-modal .modal-area .information .desc {
+  padding: 15px 0;
+  border-bottom: 2px dashed #ddd;
+  border-top: 2px dashed #ddd;
+}
+.product-modal .modal-area .information .desc p:nth-child(1) {
+  font-weight: 600;
+}
+.product-modal .modal-area .information .desc p:nth-child(2) {
+  line-height: 24px;
+  margin-top: 5px;
+  color: #777 !important;
+}
+.product-modal .modal-area .information .avialibility {
+  margin: 10px 0;
+}
+.product-modal .modal-area .information .avialibility span:nth-child(1) {
+  color: #777;
+}
+.product-modal .modal-area .information .quantity span {
+  color: #777;
+}
+.product-modal .modal-area .information .bottom {
+  margin: 15px 15px 15px 0;
+}
+.product-modal .modal-area .information .bottom .bottom-left button {
+  border: none;
+  background-color: #fff;
+}
+.product-modal .modal-area .information .bottom .bottom-left input {
+  border: 1px solid #c3c3c3;
+  height: 35px;
+  width: 80px;
+  background-color: #f6f6f6;
+}
+.product-modal .modal-area .information .bottom .bottom-left input::-moz-placeholder {
+  text-align: center;
+}
+.product-modal .modal-area .information .bottom .bottom-left input:-ms-input-placeholder {
+  text-align: center;
+}
+.product-modal .modal-area .information .bottom .bottom-left input::placeholder {
+  text-align: center;
+}
+.product-modal .modal-area .information .bottom .bottom-right i {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #787878;
+  cursor: pointer;
 }
 
 #banners {
@@ -916,7 +1035,7 @@ a {
 }
 
 .slick-prev {
-  z-index: 10 !important;
+  z-index: 1 !important;
   top: 49% !important;
   left: 18px !important;
   width: 45px;
@@ -929,7 +1048,7 @@ a {
 }
 
 .slick-next {
-  z-index: 10 !important;
+  z-index: 1 !important;
   top: 49% !important;
   right: 18px !important;
   width: 45px;
@@ -974,6 +1093,9 @@ a {
   display: block;
   color: #333;
   font-size: 20px;
+}
+.cart .icons a:hover i {
+  color: #EF6C00;
 }
 .cart:hover {
   transition: 2s;

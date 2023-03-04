@@ -68,54 +68,71 @@
 
             width: 100% !important;
         }
-        .cart{
-            .info{
-                h4{
+
+        .cart {
+            .info {
+                h4 {
                     font-size: 15px !important;
                 }
             }
-         
+
         }
     }
-    #banners{
-        .banner-right{
+
+    #banners {
+        .banner-right {
             flex-direction: row-reverse !important;
             margin-top: 10px !important;
-            .banner-right-top{
+
+            .banner-right-top {
                 display: block !important;
                 margin-left: 10px;
-               .banner-right-top-left{
-                width: 100% !important;
-               }
-               .banner-right-top-right{
-                width: 100% !important;
-                margin-left: 0px !important;
-                margin-top: 10px;
-               }
+
+                .banner-right-top-left {
+                    width: 100% !important;
+                }
+
+                .banner-right-top-right {
+                    width: 100% !important;
+                    margin-left: 0px !important;
+                    margin-top: 10px;
+                }
             }
-            .banner-right-bottom{
+
+            .banner-right-bottom {
                 height: 374px;
                 background-size: 124%;
-                .text{
+
+                .text {
                     width: 58% !important;
                 }
             }
-            
+
         }
     }
-    #vertical-products{
-        .box{
+
+    #vertical-products {
+        .box {
             margin-bottom: 20px !important;
-            .box-content{
-                .img-area{
+
+            .box-content {
+                .img-area {
                     width: 50% !important;
                 }
-                .info{
-                    span{
+
+                .info {
+                    span {
                         font-size: 16px !important;
                     }
                 }
             }
+        }
+    }
+
+    .product-modal {
+        .modal-area {
+            overflow-y: scroll !important;
+            display: block !important;
         }
     }
 
@@ -131,6 +148,7 @@
                 margin-left: 15px;
             }
         }
+
         .top-right {
             display: none !important;
         }
@@ -191,46 +209,64 @@
             width: 100% !important;
             margin: 0 10px;
         }
-      
+
     }
 
-    #banners{
-        .banner-left{
-            margin-bottom:205px !important ;
+    .product-modal {
+        left: 5% !important;
+        width: 90% !important;
+        .modal-area {
+            overflow-y: scroll!important;
+            display: block !important;
+            .img{
+                text-align: center !important;
+            }
         }
-        .banner-right{
+    }
+
+    #banners {
+        .banner-left {
+            margin-bottom: 205px !important;
+        }
+
+        .banner-right {
             display: flex;
             flex-direction: column-reverse !important;
-           
-            .banner-right-top{
+
+            .banner-right-top {
                 display: block !important;
-               .banner-right-top-left{
-                width: 100% !important;
-               }
-               .banner-right-top-right{
-                width: 100% !important;
-                margin-left: 0px !important;
-                margin-top: 10px;
-               }
+
+                .banner-right-top-left {
+                    width: 100% !important;
+                }
+
+                .banner-right-top-right {
+                    width: 100% !important;
+                    margin-left: 0px !important;
+                    margin-top: 10px;
+                }
             }
-            .banner-right-bottom{
+
+            .banner-right-bottom {
                 margin-bottom: 10px !important;
                 background-size: 130%;
 
-                .text{
+                .text {
                     width: 58% !important;
                 }
             }
-            
+
         }
     }
-    #vertical-products{
-        .box{
+
+    #vertical-products {
+        .box {
             margin-bottom: 20px !important;
-            .box-content{
-                .img-area{
+
+            .box-content {
+                .img-area {
                     width: 16% !important;
-                    
+
                 }
             }
         }

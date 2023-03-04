@@ -14,8 +14,8 @@
 
 <body>
     <!-- start header -->
+    <div class="overlay"></div>
     <header>
-        <div class="overlay"></div>
         <section id="top">
             <div class="container">
                 <div class="top-area d-flex align-items-center justify-content-between">
@@ -268,6 +268,56 @@
             </div>
         </section>
 
+        <div class="product-modal d-none">
+            <div class="modal-area d-flex">
+                <div class="close-icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="img">
+                    <img src="" alt="">
+                </div>
+                <div class="information">
+                    <h2></h2>
+                    <div class="prices">
+                        <div class="discount d-flex align-items-center">
+                            <del class="text-muted"></del>
+                            <p>50% OFF</p>
+                        </div>
+                        <div class="native-price">
+                           <span></span>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <p>Product details</p>
+                        <p>Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry. Lorem Ipsum has been the
+                            industrys standard dummy text ever since the 1500s, when an
+                            unknown printer took a galley of type and scrambled it to
+                            make a type specimen book.</p>
+                    </div>
+                    <div class="avialibility">
+                        <span>Avalibility:</span>
+                        <span>In Stock</span>
+                    </div>
+                    <div class="quantity">
+                        <span>Quantity</span>
+                    </div>
+                    <div class="bottom d-flex align-items-center justify-content-between">
+                        <div class="bottom-left">
+                            <button><i class="fa-solid fa-minus"></i></button>
+                            <input type="number" min="1" placeholder="1">
+                            <button><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="bottom-right d-flex">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <!-- products -->
         <section id="products">
             <div class="container">
@@ -294,10 +344,10 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a class="eye-btn" href="#"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
-
                                         </div>
+                                        
                                         <div class="info">
                                             <span>Headphones</span>
                                             <h4>ONTEC E Headset</h4>
@@ -330,7 +380,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
                                         </div>
                                         <div class="info">
@@ -365,7 +415,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -400,7 +450,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -436,7 +486,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -472,7 +522,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -507,7 +557,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -542,7 +592,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -582,7 +632,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -618,7 +668,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
                                         </div>
                                         <div class="info">
@@ -652,7 +702,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -688,7 +738,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -724,7 +774,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -759,7 +809,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -795,7 +845,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -830,7 +880,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -870,7 +920,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -906,7 +956,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
                                         </div>
                                         <div class="info">
@@ -941,7 +991,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -976,7 +1026,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -1012,7 +1062,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -1048,7 +1098,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -1083,7 +1133,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -1118,7 +1168,7 @@
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"> <i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                             <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
                                         </div>
@@ -1156,6 +1206,7 @@
             </div>
             </div>
         </section>
+
         <!-- banners -->
         <section id="banners">
             <div class="container">
@@ -1203,6 +1254,7 @@
             </div>
         </section>
 
+        <!-- vertical products -->
         <section id="vertical-products">
             <div class="container">
                 <div class="row">
@@ -1329,7 +1381,7 @@
                                         <p>850.00</p>
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -1393,80 +1445,84 @@
                                         <p>1,200.00</p>
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-      <footer>
-        <section id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="content">
-                            <div class="logo">
-                                <img src="./assets/images/logo/logo-02-01.png" alt="">
-                            </div>
-                            <div class="text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada fringilla sem, at dictum lectus ultricies quis. Etiam eu bibendum orci. Aliquam erat volutpat.</p>
-                                <a href="#">More about us</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="content">
-                            <h5>Services</h5>
-                            <ul class="services-content">
-                                <li><a href="#">Hotel Growth</a></li>
-                                <li><a href="#">Hotel Loan</a></li>
-                                <li><a href="#">Financial Planning</a></li>
-                                <li><a href="#">Insurance Consulting</a></li>
-                                <li><a href="#">Retirenment Planing</a></li>
-                                <li><a href="#">Tax Planing</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="content">
-                            <h5>Subscribe Newsletter</h5>
-                            <p>Get latest updates and offers.</p>
-                            <div class="inp-btn" >
-                                <input type="text" placeholder="Enter your email address">
-                                <button>SUBSCRIBE US</button>
+
+        <!-- footer -->
+        <footer>
+            <section id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="content">
+                                <div class="logo">
+                                    <img src="./assets/images/logo/logo-02-01.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada
+                                        fringilla sem, at dictum lectus ultricies quis. Etiam eu bibendum orci. Aliquam
+                                        erat volutpat.</p>
+                                    <a href="#">More about us</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="content">
-                            <h5>Contact us</h5>
-                            <div class="content-bar">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <p>Apple St, New York, NY 10012, USA</p>
+                        <div class="col-lg-2">
+                            <div class="content">
+                                <h5>Services</h5>
+                                <ul class="services-content">
+                                    <li><a href="#">Hotel Growth</a></li>
+                                    <li><a href="#">Hotel Loan</a></li>
+                                    <li><a href="#">Financial Planning</a></li>
+                                    <li><a href="#">Insurance Consulting</a></li>
+                                    <li><a href="#">Retirenment Planing</a></li>
+                                    <li><a href="#">Tax Planing</a></li>
+                                </ul>
                             </div>
-                            <div class="content-bar">
-                                <i class="fa-solid fa-phone"></i>
-                                <p>
-                                    ( 018) 65 524 8503 / (125) 954 7854</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="content">
+                                <h5>Subscribe Newsletter</h5>
+                                <p>Get latest updates and offers.</p>
+                                <div class="inp-btn">
+                                    <input type="text" placeholder="Enter your email address">
+                                    <button>SUBSCRIBE US</button>
+                                </div>
                             </div>
-                            <div class="content-bar">
-                                <i class="fa-solid fa-envelope"></i>
-                                <p>
-                                    contact@lamarena.com</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="content">
+                                <h5>Contact us</h5>
+                                <div class="content-bar">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <p>Apple St, New York, NY 10012, USA</p>
+                                </div>
+                                <div class="content-bar">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <p>
+                                        ( 018) 65 524 8503 / (125) 954 7854</p>
+                                </div>
+                                <div class="content-bar">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <p>
+                                        contact@lamarena.com</p>
+                                </div>
+                                <ul class="social-links">
+                                    <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
+                                </ul>
                             </div>
-                            <ul class="social-links">
-                                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-      </footer>
+            </section>
+        </footer>
     </main>
 
 

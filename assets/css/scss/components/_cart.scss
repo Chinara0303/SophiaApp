@@ -2,7 +2,7 @@
 @import '../partials/variables';
 
 .slick-prev {
-    z-index: 10 !important;
+    z-index: 1 !important;
     top: 49% !important;
     left:18px !important;
     width: 45px;
@@ -16,7 +16,7 @@
 
 }
 .slick-next{
-    z-index: 10 !important;
+    z-index: 1 !important;
     top: 49% !important;
     right: 18px !important;
     width: 45px;
@@ -69,6 +69,9 @@
             display: block;
             color: #333;
             font-size: 20px;
+            &:hover{
+                i{color: $nativeColor;}
+            }
         }
 
     }
