@@ -9,12 +9,13 @@ if (dbProducts != null) {
     for (const product of dbProducts) {
         tableArea.classList.remove("d-none");
         msg.classList.add("d-none");
+        let nativePrice = parseInt(product.price) / parseInt(product.count)
         tbody.innerHTML +=
             `
         <tr data-id="${product.id}">
             <td><div class="img"><img src="${product.img}" alt=""></div></td>
             <td><p class="name">${product.name}</p></td>
-            <td><p class="price">${product.price}</p></td> 
+            <td><p class="price">${nativePrice}</p></td> 
             <td>
                 <div class="bottom d-flex align-items-center justify-content-center">
                     <div class="bottom-left">
@@ -86,11 +87,39 @@ function decrement() {
                     if (quantity.value == 1) {
                         return;
                     }
+                    let nativePrice =  parseInt(product.price) / parseInt(product.count)
                     quantity.value--;
                     product.count--;
+                    product.price = nativePrice * product.count;
+                    this.parentNode.parentNode.parentNode.nextElementSibling.firstChild.innerText = product.price;
+                    grandTotal();
+                    getProductsCount();
                 }
             }
             localStorage.setItem("basket",JSON.stringify(dbProducts))
         })
     }
 }
+let incrementBtns = document.querySelectorAll(".increment")
+increment()
+
+function increment() {
+    for (const incrementBtn of incrementBtns) {
+        incrementBtn.addEventListener("click",function(){
+            let quantity = incrementBtn.previousElementSibling;
+            for (const product of dbProducts) {
+                if(product.id == this.parentNode.parentNode.parentNode.parentNode.getAttribute("data-id")){
+                    let nativePrice =  parseInt(product.price / product.count)
+                    quantity.value++;
+                    product.count++;
+                    product.price = nativePrice * product.count;
+                    this.parentNode.parentNode.parentNode.nextElementSibling.firstChild.innerText = product.price;
+                    grandTotal()
+                    getProductsCount()
+                }
+            }
+            localStorage.setItem("basket",JSON.stringify(dbProducts))
+        })
+    }
+}
+

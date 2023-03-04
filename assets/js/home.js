@@ -43,6 +43,8 @@ $(document).ready(function () {
       }
     ]
   });
+ 
+
 
   //modal
   $(document).on("click", ".eye-btn", function (e) {
