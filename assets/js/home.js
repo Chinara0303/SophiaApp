@@ -1,62 +1,4 @@
 $(document).ready(function () {
-  //currency
-  $(document).on("click", ".title-currency", function () {
-    $(".currency").toggleClass("d-none");
-    $(".languages").addClass("d-none");
-  })
-
-  $(".eur-btn").click(function () {
-    let text = $(this).children().eq(0).text();
-    $(this).parent().prev().children().eq(0).text(text);
-    $(".currency").addClass("d-none")
-  })
-  $(".usd-btn").click(function () {
-    let text = $(this).children().eq(0).text();
-    $(this).parent().prev().children().eq(0).text(text);
-    $(".currency").addClass("d-none")
-  })
-
-  //language
-  $(document).on("click", ".title-lang", function () {
-    $(".languages").toggleClass("d-none");
-    $(".currency").addClass("d-none");
-  })
-  $(document).on("click", "main", function () {
-    if (!$(".sub-menu").hasClass("d-none")) {
-      $(".sub-menu").addClass("d-none")
-    }
-    // $(".currency").toggleClass("d-none");
-  })
-
-  $(document).on("click", ".item", function () {
-    let clickedFLag = $(this).children().eq(0).attr("src");
-    let clickedText = $(this).children().eq(1).text();
-    $(this).parent().prev().children().eq(0).attr("src", clickedFLag);
-    $(this).parent().prev().children().eq(1).text(clickedText);
-    $(".languages").toggleClass("d-none");
-  })
-
-  //submenu
-  $(document).on("click", ".last-menu", function (e) {
-    e.preventDefault();
-    $(".sub-menu").toggleClass("d-none")
-  })
-
-  //phone-menu
-  $(document).on("click", ".open-icon", function () {
-    $(".menu").addClass("active-menu");
-    $(".overlay").css("display", "block")
-  })
-
-  $(document).on("click", ".close-icon", function () {
-    $(".menu").removeClass("active-menu");
-    $(".overlay").css("display", "none");
-  })
-  $(document).on("click", ".overlay", function () {
-    $(".menu").removeClass("active-menu");
-    $(".overlay").css("display", "none");
-    $(".product-modal").addClass("d-none");
-  })
 
   //slider intro
 
@@ -107,12 +49,16 @@ $(document).ready(function () {
     e.preventDefault()
     $(".product-modal").removeClass("d-none");
     $(".overlay").css("display", "block");
+
     let img = $(this).parent().prev().children().eq(0).children().eq(0).attr("src");
     $(".img").children().eq(0).attr("src", img);
+
     let title = $(this).parent().next().children().eq(1).text()
     $(".information").children().eq(0).text(title);
+
     let price = $(this).parent().next().children().eq(2).children().eq(1).children().eq(1).text();
     $(".discount").children().eq(0).text(`$${price}`);
+
     let discountPrice = parseInt(price) / 2;
     $(".native-price").children().eq(0).text(`$${discountPrice}`)
   })
@@ -121,6 +67,7 @@ $(document).ready(function () {
     $(".product-modal").addClass("d-none");
     $(".overlay").css("display", "none");
   })
+
 
 });
 
@@ -146,3 +93,73 @@ function activeTab(item) {
   document.querySelector("#" + content).classList.add("is-active");
   btnTarget.classList.add("is-active");
 }
+
+//basket 
+
+
+let cardBtns = document.querySelectorAll(".info-bottom");
+let products = [];
+
+if (localStorage.getItem("basket") != null) {
+  products = JSON.parse(localStorage.getItem("basket"))
+}
+
+cardBtns.forEach(cardBtn => {
+  cardBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    let prodImg = cardBtn.parentElement.previousElementSibling.previousElementSibling.firstElementChild.firstElementChild.getAttribute("src")
+    let prodName = cardBtn.parentElement.children[1].innerText;
+    let prodPrice = cardBtn.previousElementSibling.children[1].lastElementChild.innerText;
+    let prodId = parseInt(cardBtn.parentNode.parentNode.getAttribute("data-id"))
+    let existProduct = products.find(p => p.id == prodId);
+    if (existProduct != undefined) {
+      existProduct.count += 1;
+    }
+    else {
+      products.push({
+        id: prodId,
+        img: prodImg,
+        name: prodName,
+        price: prodPrice,
+        count: 1
+      })
+    }
+    localStorage.setItem("basket", JSON.stringify(products));
+    getProductsCount();
+    getProductsInfo();
+  })
+
+})
+
+function getProductsCount() {
+  document.querySelector(".product-count").innerText = products.length
+}
+
+getProductsCount();
+
+function getProductsInfo() {
+
+  for (const product of products) {
+    document.querySelector(".products-info").innerHTML +=
+      `
+      <div class="heading d-flex align-items-center justify-content-between">
+          <p class="prod-name">${product.name}</p>
+          <i class="fa-solid fa-trash delete"></i>
+      </div>
+      <div class="price-count">
+          <span class="quantity">${product.count}</span>
+          <span>X</span>
+          <span class="price">${product.price}</span>
+      </div>
+      `
+  }
+
+}
+getProductsInfo();
+
+// function uuidv4() {
+//   return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+//     (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+//   );
+// }

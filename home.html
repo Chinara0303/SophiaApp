@@ -15,6 +15,7 @@
 <body>
     <!-- start header -->
     <div class="overlay"></div>
+    <div class="colorless-overlay"></div>
     <header>
         <section id="top">
             <div class="container">
@@ -110,7 +111,7 @@
                     <div class="row">
                         <div class="col-lg-2 col-sm-12 col-md-12">
                             <div class="logo">
-                                <img src="./assets/images/logo/logo-white.png" alt="">
+                                <a href="home.html"><img src="./assets/images/logo/logo-white.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-12 col-md-12">
@@ -134,33 +135,27 @@
                                     </div>
                                 </div>
                                 <div class="shopping-cart">
-                                    <p class="product-count">0</p>
+                                    <p class="product-count"></p>
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     <p><span>$</span>0.00</p>
                                 </div>
-                                <div class="basket-desc-area">
+                                <div class="basket-desc-area d-none">
                                     <div class="title d-flex align-items-center justify-content-between">
-                                        <p>CHECK CARD</p>
-                                        <p> 
-                                            <span class="prod-count">0</span>
+                                        <a href="basket.html">
+                                            <p>CHECK CARD</p>
+                                        </a>
+                                        <p>
+                                            <span class="prod-count"></span>
                                             <span>Item</span>
                                         </p>
                                     </div>
                                     <div class="products-info">
-                                        <p class="d-none d-flex align-items-center justify-content-center">Please add product</p>
-                                        <div class="heading d-flex align-items-center justify-content-between">
-                                            <p class="prod-name">name</p>
-                                            <i class="fa-solid fa-trash delete"></i>
-                                        </div>
-                                        <div class="price-count">
-                                            <span>1</span>
-                                            <span>X</span>
-                                            <span>88</span>
-                                        </div>
+                                        <p class="d-none d-flex align-items-center justify-content-center">Please add
+                                            product</p>
                                     </div>
                                     <div class="subtotal d-flex align-items-center justify-content-between">
                                         <span>Subtotal:</span>
-                                        <span>$88</span>
+                                        <span class="subtotal-price"></span>
                                     </div>
                                 </div>
                             </div>
@@ -187,7 +182,7 @@
                                     <li><a href="">Testimonials <span>NEW</span> </a></li>
                                     <li><a href="">Compare</a></li>
                                     <li><a href="">Checkout</a></li>
-                                    <li><a href="">Cart</a></li>
+                                    <li><a href="basket.html">Cart</a></li>
                                     <li><a href="">My Account</a></li>
                                     <li><a href="">404</a></li>
                                 </ul>
@@ -362,7 +357,7 @@
                         <div class="tab-bar">
                             <div class="tab-bar-content is-active" id="item-1">
                                 <div class="cards">
-                                    <div class="cart">
+                                    <div class="cart" data-id="1">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/headphone1 (2).png"
                                                     alt=""></a>
@@ -398,7 +393,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="2">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/headphone1 (3).png"
                                                     alt=""></a>
@@ -433,7 +428,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="3">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/headphone1 (4).png"
                                                     alt=""></a>
@@ -469,7 +464,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="4">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/headphone1.png" alt=""></a>
                                         </div>
@@ -504,7 +499,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="5">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/headphone1 (1).png"
                                                     alt=""></a>
@@ -540,7 +535,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="6">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/headphone1 (2).png"
                                                     alt=""></a>
@@ -576,7 +571,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="7">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/laptop.png" alt=""></a>
                                         </div>
@@ -611,7 +606,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="8">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/laptop (1).png" alt=""></a>
                                         </div>
@@ -650,10 +645,11 @@
                             </div>
                             <div class="tab-bar-content" id="item-2">
                                 <div class="cards">
-                                    <div class="cart">
+                                    <div class="cart" data-id="1">
                                         <div class="img-area">
-                                            <a href=""><img src="./assets/images/products/headphone1 (4).png"
-                                                    alt=""></a>
+                                            <a href="">
+                                                <img src="./assets/images/products/headphone1 (4).png" alt="">
+                                            </a>
                                         </div>
                                         <div class="icons">
                                             <a href="#"> <i class="fa-regular fa-heart"></i></a>
@@ -686,7 +682,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="2">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/headphone1 (2).png"
                                                     alt=""></a>
@@ -721,7 +717,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="3">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/laptop (1).png" alt=""></a>
                                         </div>
@@ -756,7 +752,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="4">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/headphone1 (1).png"
                                                     alt=""></a>
@@ -792,7 +788,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="5">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/headphone1 (2).png"
                                                     alt=""></a>
@@ -828,7 +824,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="6">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/laptop.png" alt=""></a>
                                         </div>
@@ -863,7 +859,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="7">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/headphone1 (4).png"
                                                     alt=""></a>
@@ -899,7 +895,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="cart">
+                                    <div class="cart" data-id="8">
                                         <div class="img-area">
                                             <a href=""><img src="./assets/images/products/laptop (1).png" alt=""></a>
                                         </div>
@@ -1564,6 +1560,7 @@
     <script src="./assets/css/slick-slider/slick-1.8.1/slick/slick.min.js"></script>
     <script src="./assets/css/slick-slider/slick-1.8.1/slick/slick.js"></script>
     <script src="./assets/js/home.js"></script>
+    <script src="./assets/js/common.js"></script>
 </body>
 
 </html>

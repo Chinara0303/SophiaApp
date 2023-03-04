@@ -1,24 +1,3 @@
-.overlay {
-  position: fixed;
-  /* Sit on top of the page content */
-  display: none;
-  /* Hidden by default */
-  width: 100%;
-  /* Full width (cover the whole page) */
-  height: 100%;
-  /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Black background with opacity */
-  z-index: 2;
-  /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer;
-  /* Add a pointer on hover */
-}
-
 #top {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -136,6 +115,7 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   border-radius: 4px;
   border-top: 4px solid #c3c3c3 !important;
+  z-index: 1;
 }
 #top .top-area .top-left .select .currency i {
   font-size: 12px;
@@ -325,6 +305,9 @@
   right: 122px;
   z-index: 1;
 }
+#center .center-area .rigth-area .basket-desc-area a {
+  color: #222 !important;
+}
 #center .center-area .rigth-area .basket-desc-area .products-info {
   margin-top: 15px;
   padding-top: 15px;
@@ -336,7 +319,7 @@
   color: #777;
 }
 #center .center-area .rigth-area .basket-desc-area .products-info .heading p {
-  font-size: 20px;
+  font-size: 16px;
 }
 #center .center-area .rigth-area .basket-desc-area .products-info .heading .delete {
   color: #777;
@@ -370,6 +353,7 @@
   left: -17px;
   border-radius: 4px;
   border-top: 4px solid #c3c3c3;
+  z-index: 2;
 }
 #bottom .sub-menu ul {
   margin-top: 15px;
@@ -441,6 +425,14 @@
   #center .center-area .rigth-area {
     justify-content: space-around !important;
   }
+  #center .basket-desc-area {
+    width: 29% !important;
+    top: 246px !important;
+    right: 159px !important;
+  }
+  #center .basket-desc-area .price-count {
+    text-align: start !important;
+  }
   #intro-slider .slider {
     padding: 100px !important;
   }
@@ -495,9 +487,16 @@
   #vertical-products .box .box-content .info span {
     font-size: 16px !important;
   }
+  .product-modal {
+    height: 535px !important;
+  }
   .product-modal .modal-area {
+    height: 535px !important;
     overflow-y: scroll !important;
     display: block !important;
+  }
+  .product-modal .modal-area img {
+    width: 100% !important;
   }
 }
 @media (max-width: 576px) {
@@ -533,6 +532,14 @@
   #center .center-area .rigth-area {
     justify-content: space-around !important;
   }
+  #center .basket-desc-area {
+    width: 45% !important;
+    top: 246px !important;
+    right: 50px !important;
+  }
+  #center .basket-desc-area .price-count {
+    text-align: start !important;
+  }
   #info .box {
     border-right: none !important;
     justify-content: flex-start !important;
@@ -547,13 +554,18 @@
   .product-modal {
     left: 5% !important;
     width: 90% !important;
+    height: 535px !important;
   }
   .product-modal .modal-area {
+    height: 535px !important;
     overflow-y: scroll !important;
     display: block !important;
   }
   .product-modal .modal-area .img {
     text-align: center !important;
+  }
+  .product-modal .modal-area .img img {
+    width: 100% !important;
   }
   #banners .banner-left {
     margin-bottom: 205px !important;
@@ -602,6 +614,33 @@ a {
   text-decoration: none;
 }
 
+.colorless-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
 .slick-dots {
   bottom: 0 !important;
 }
@@ -615,6 +654,7 @@ a {
 #intro-slider .slider-intro .slider {
   padding: 150px;
   color: #333;
+  background-position: 50%;
 }
 #intro-slider .slider-intro .slider h1 {
   font-size: 44px;

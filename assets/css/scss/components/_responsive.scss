@@ -34,6 +34,16 @@
                 justify-content: space-around !important;
             }
         }
+
+        .basket-desc-area {
+            width: 29% !important;
+            top: 246px !important;
+            right: 159px !important;
+
+            .price-count {
+                text-align: start !important;
+            }
+        }
     }
 
     #intro-slider {
@@ -130,9 +140,15 @@
     }
 
     .product-modal {
+        height: 535px !important;
+
         .modal-area {
+            height: 535px !important;
             overflow-y: scroll !important;
             display: block !important;
+            img{
+                width: 100% !important;
+            }
         }
     }
 
@@ -188,6 +204,16 @@
                 justify-content: space-around !important;
             }
         }
+
+        .basket-desc-area {
+            width: 45% !important;
+            top: 246px !important;
+            right: 50px !important;
+
+            .price-count {
+                text-align: start !important;
+            }
+        }
     }
 
     #info {
@@ -215,11 +241,19 @@
     .product-modal {
         left: 5% !important;
         width: 90% !important;
+        height: 535px !important;
+
         .modal-area {
-            overflow-y: scroll!important;
+            height: 535px !important;
+            overflow-y: scroll !important;
             display: block !important;
-            .img{
+
+            .img {
                 text-align: center !important;
+
+                img {
+                    width: 100% !important;
+                }
             }
         }
     }
