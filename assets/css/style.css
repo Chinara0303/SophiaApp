@@ -1,15 +1,22 @@
 .overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  position: fixed;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
 }
 
 #top {
@@ -305,6 +312,44 @@
   border-radius: 50%;
   bottom: 21px;
   left: 20px;
+}
+#center .center-area .rigth-area .basket-desc-area {
+  color: #222222;
+  width: 16%;
+  background-color: #fff;
+  border-top: 4px solid #c3c3c3 !important;
+  border-radius: 4px;
+  padding: 20px;
+  position: absolute;
+  top: 134px;
+  right: 122px;
+  z-index: 1;
+}
+#center .center-area .rigth-area .basket-desc-area .products-info {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #c3c3c3;
+}
+#center .center-area .rigth-area .basket-desc-area .products-info .price-count {
+  border-bottom: 1px solid #c3c3c3;
+  padding-bottom: 15px;
+  color: #777;
+}
+#center .center-area .rigth-area .basket-desc-area .products-info .heading p {
+  font-size: 20px;
+}
+#center .center-area .rigth-area .basket-desc-area .products-info .heading .delete {
+  color: #777;
+  cursor: pointer;
+}
+#center .center-area .rigth-area .basket-desc-area .subtotal {
+  padding-top: 15px;
+}
+#center .center-area .rigth-area .basket-desc-area .subtotal span {
+  font-size: 18px;
+}
+#center .center-area .rigth-area .basket-desc-area .subtotal span:nth-child(1) {
+  color: #777;
 }
 
 #bottom {

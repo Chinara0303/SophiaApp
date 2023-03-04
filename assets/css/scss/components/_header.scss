@@ -1,18 +1,27 @@
 @import '../partials/mixins';
 @import '../partials/variables';
-.overlay{
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
+
+.overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
 }
+
 #top {
     user-select: none;
     font-family: $fontFamily;
@@ -35,7 +44,7 @@
         .active-menu {
             transform: translate(0) !important;
         }
-        
+
         .menu {
             background-color: white;
             position: absolute;
@@ -46,6 +55,7 @@
             z-index: 11;
             transform: translate(-1000px);
             transition: all .7s;
+
             .close-icon {
                 font-size: 24px;
                 color: #f44336;
@@ -381,6 +391,52 @@
                 }
             }
 
+            .basket-desc-area {
+                color: #222222;
+                width: 16%;
+                background-color: #fff;
+                border-top: 4px solid #c3c3c3 !important;
+                border-radius: 4px;
+                padding: 20px;
+                position: absolute;
+                top: 134px;
+                right: 122px;
+                z-index: 1;
+
+                .products-info {
+                    margin-top: 15px;
+                    padding-top: 15px;
+                    border-top: 1px solid #c3c3c3;
+
+                    .price-count {
+                        border-bottom: 1px solid #c3c3c3;
+                        padding-bottom: 15px;
+                        color: #777;
+                    }
+                    .heading{
+                        p{
+                            font-size: 20px;
+                        }
+                        .delete {
+                            color: #777;
+                            cursor: pointer;
+                        }
+                    }
+                    
+                }
+
+                .subtotal {
+                    padding-top: 15px;
+
+                    span {
+                        font-size: 18px;
+                        &:nth-child(1) {
+                            color: #777;
+                        }
+                    }
+                }
+            }
+
 
         }
 
@@ -393,7 +449,7 @@
     user-select: none;
 
     .sub-menu {
-        z-index:1;
+        z-index: 1;
         box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
         background-color: white;
         width: 200px;
@@ -450,7 +506,7 @@
             font-weight: 600;
             cursor: pointer;
 
-         
+
         }
 
         &:hover {
