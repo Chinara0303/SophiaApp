@@ -133,33 +133,30 @@
                                  <div class="shopping-cart">
                                      <p class="product-count">0</p>
                                      <i class="fa-solid fa-cart-shopping"></i>
-                                     <p><span>$</span>0.00</p>
+                                     <p class="bottomSubtotal">$0.00</p>
                                  </div>
                                  <div class="basket-desc-area d-none">
-                                     <div class="title d-flex align-items-center justify-content-between">
-                                         <a href="basket.html"><p>CHECK CARD</p></a>
-                                         <p> 
-                                             <span class="prod-count">0</span>
-                                             <span>Item</span>
-                                         </p>
-                                     </div>
-                                     <div class="products-info">
-                                         <p class="d-none d-flex align-items-center justify-content-center">Please add product</p>
-                                         <div class="heading d-flex align-items-center justify-content-between">
-                                             <p class="prod-name">name</p>
-                                             <i class="fa-solid fa-trash delete"></i>
-                                         </div>
-                                         <div class="price-count">
-                                             <span>1</span>
-                                             <span>X</span>
-                                             <span>88</span>
-                                         </div>
-                                     </div>
-                                     <div class="subtotal d-flex align-items-center justify-content-between">
-                                         <span>Subtotal:</span>
-                                         <span>$88</span>
-                                     </div>
-                                 </div>
+                                    <div class="title d-flex align-items-center justify-content-between">
+                                        <a href="basket.html">
+                                            <p>CHECK CARD</p>
+                                        </a>
+                                        <p>
+                                            <span class="prod-count">0</span>
+                                            <span>Item</span>
+                                        </p>
+                                    </div>
+                       
+                                    <div class="products-info">
+                                    
+                                    </div>
+                                    <p class="message d-flex align-items-center justify-content-center">
+                                        Please add product
+                                    </p>
+                                    <div class="subtotal d-none d-flex align-items-center justify-content-between">
+                                        <span>Subtotal:</span>
+                                        <span class="subtotal-price"></span>
+                                    </div>
+                                </div>
                              </div>
                          </div>
                      </div>
@@ -198,6 +195,49 @@
      </header>
      <!-- end header -->
 
+     <main>
+        <section id="breadcrumb-area">
+            <div class="container">
+                <span>Cart</span>
+                <span>Home / Cart</span>
+            </div>
+            <hr>
+        </section>
+        <section id="main">
+            <div class="container">
+                <div class="table-area d-none">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Name </th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                         
+                        </tbody>
+                    </table>
+                    <div class="footer d-flex align-items-center justify-content-between">
+                       <button>Continue Shopping</button>
+                        <div class="footer-right">
+                            <span class="total-price"> </span>
+                            <button class="checkout" href="">Proceed To Checkout</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg">
+                    <div class="empty-msg">
+                        <p>YOU HAVE NO ITEMS IN YOUR SHOPPING CART.</p>
+                    </div>
+                    <button >Continue Shopping</button>
+                 </div>
+            </div>
+        </section>
+     </main>
 
 
 

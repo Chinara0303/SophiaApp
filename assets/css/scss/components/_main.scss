@@ -15,6 +15,7 @@
             padding: 150px;
             color: #333;
             background-position: 50%;
+
             h1 {
                 font-size: 44px;
                 font-weight: bold;
@@ -199,9 +200,9 @@
     background: white;
     border-radius: 5px;
     box-shadow: 0 11px 15px -7px rgb(0 0 0 / 20%), 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%);
-    
+
     .modal-area {
-        .close-icon{
+        .close-icon {
             position: absolute;
             top: -25px;
             right: -22px;
@@ -217,12 +218,14 @@
             cursor: pointer;
             box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
         }
+
         .information {
-            padding: 18px ;
+            padding: 18px;
 
             h2 {
                 font-size: 40px;
             }
+
             .prices {
                 .discount {
                     del {
@@ -237,64 +240,78 @@
                         font-weight: 500;
                     }
                 }
-                .native-price{
-                    color:black;
+
+                .native-price {
+                    color: black;
                     margin: 10px 0;
-                    span{
+
+                    span {
                         font-size: 25px;
-                        &:nth-child(1){
+
+                        &:nth-child(1) {
                             margin-right: -5px;
                         }
                     }
                 }
             }
-            .desc{
+
+            .desc {
                 padding: 15px 0;
                 border-bottom: 2px dashed #ddd;
                 border-top: 2px dashed #ddd;
-                p{
-                    &:nth-child(1){
+
+                p {
+                    &:nth-child(1) {
                         font-weight: 600;
                     }
-                    &:nth-child(2){
+
+                    &:nth-child(2) {
                         line-height: 24px;
                         margin-top: 5px;
-                        color: #777!important;
+                        color: #777 !important;
                     }
                 }
             }
-            .avialibility{
+
+            .avialibility {
                 margin: 10px 0;
-                span{
-                    &:nth-child(1){
+
+                span {
+                    &:nth-child(1) {
                         color: #777;
                     }
                 }
             }
-            .quantity{
-                span{
+
+            .quantity {
+                span {
                     color: #777;
                 }
             }
-            .bottom{
+
+            .bottom {
                 margin: 15px 15px 15px 0;
-                .bottom-left{
-                    button{
-                        border: none ;
+
+                .bottom-left {
+                    button {
+                        border: none;
                         background-color: #fff;
                     }
-                    input{
-                       border: 1px solid #c3c3c3;
-                       height: 35px;
-                       width: 80px;
-                       background-color: #f6f6f6;
-                       &::placeholder{
-                        text-align: center;
-                       }
+
+                    input {
+                        border: 1px solid #c3c3c3;
+                        height: 35px;
+                        width: 80px;
+                        background-color: #f6f6f6;
+
+                        &::placeholder {
+                            text-align: center;
+                        }
                     }
                 }
-                .bottom-right{
-                    i{
+
+                .bottom-right {
+                    i {
                         display: inline-block;
                         margin-left: 20px;
                         font-size: 20px;
@@ -544,6 +561,9 @@
                 padding: 18px;
                 border-radius: 5px;
                 width: 100%;
+                border: 1px solid #ddd;
+                text-align: center;
+                
             }
 
             button {
@@ -565,6 +585,7 @@
 
             p {
                 margin-left: 5px !important;
+                font-size: 15px;
             }
 
         }
@@ -588,7 +609,7 @@
                 }
             }
 
-            ;
+
         }
     }
 }

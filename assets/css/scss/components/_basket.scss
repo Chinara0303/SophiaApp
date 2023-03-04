@@ -1,0 +1,128 @@
+@import '../partials/mixins';
+@import '../partials/variables';
+
+#breadcrumb-area {
+    font-family: $fontFamily;
+    padding: 15px 0;
+
+    span {
+        color: #333;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        &:last-child {
+            float: right;
+        }
+    }
+}
+
+#main {
+    font-family: $fontFamily;
+    .table-area {
+        width: 100%;
+        border-radius: 4px;
+        box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, .1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, .12) !important;
+        padding: 16px;
+        text-align: center;
+
+        thead {
+            th {
+                color: #0000008a;
+                font-size: 13px
+            }
+
+            border-color: #333 !important;
+        }
+
+        tbody {
+            .img {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .name {
+                font-size: 14px;
+                color: #333;
+                margin-top: 30px !important;
+            }
+
+            .bottom {
+                margin-top: 30px !important;
+                .bottom-left {
+                    button {
+                        border: none;
+                        background-color: #fff;
+                    }
+
+                    input {
+                        border: 1px solid #c3c3c3;
+                        height: 35px;
+                        width: 80px;
+                        background-color: #f6f6f6;
+                        text-align: center;
+                       
+                        &::placeholder {
+                            text-align: center;
+                        }
+                    }
+                }
+
+            }
+            .price{
+                margin-top: 30px !important;
+            }
+            .subtotal-price{
+                color: #f33927;
+                font-weight: 600;
+                font-size: 20px;
+                margin-top: 30px !important;
+                display: inline-block;
+            }
+            .delete{
+                font-size: 27px;
+                cursor: pointer;
+                margin-top: 30px !important;
+            }
+
+        }
+       
+    }
+    .footer,.msg{
+        padding: 0 40px;
+        button{
+            padding: 11px 30px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background: $nativeColor;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .total-price{
+            font-size: 13px;
+            margin-right: 15px;
+        }
+    }
+    .msg{
+        text-align: center;
+        .empty-msg{
+            margin-bottom: 15px !important;
+            width: 34%;
+            margin: 0 auto;
+            background: #f33927;
+            color: white;
+            border-radius: 14px;
+            border: none;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 6px;
+        }
+       
+    }
+}
