@@ -152,6 +152,20 @@
         }
     }
 
+    #services{
+        .item{
+            width: 100% !important;
+        }
+    }
+    .expert{
+        .info-area{
+            height: 10%;
+        }
+        .social-links-area{
+            height: -1%;
+        }
+    }
+
 }
 
 
@@ -303,6 +317,14 @@
 
                 }
             }
+        }
+    }
+    .expert{
+        .info-area{
+            height: 10% !important;
+        }
+        .social-links-area{
+            height: 10% !important;
         }
     }
 }

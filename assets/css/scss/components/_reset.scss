@@ -37,3 +37,20 @@ a {
     z-index: 2;
     cursor: pointer;
 }
+
+
+#breadcrumb-area {
+    font-family: $fontFamily;
+    padding: 15px 0;
+
+    span {
+        color: #333;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 500;
+        
+        &:last-child {
+            float: right;
+        }
+    }
+}

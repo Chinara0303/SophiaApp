@@ -1,21 +1,6 @@
 @import '../partials/mixins';
 @import '../partials/variables';
 
-#breadcrumb-area {
-    font-family: $fontFamily;
-    padding: 15px 0;
-
-    span {
-        color: #333;
-        font-size: 13px;
-        text-transform: uppercase;
-        font-weight: 500;
-
-        &:last-child {
-            float: right;
-        }
-    }
-}
 
 #main {
     font-family: $fontFamily;
