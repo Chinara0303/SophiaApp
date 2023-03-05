@@ -885,6 +885,7 @@ a {
   height: 35px;
   width: 80px;
   background-color: #f6f6f6;
+  text-align: center;
 }
 .product-modal .modal-area .information .bottom .bottom-left input::-moz-placeholder {
   text-align: center;
@@ -1363,11 +1364,4 @@ a {
   font-weight: 600;
   font-size: 13px;
   padding: 6px;
-
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }/*# sourceMappingURL=style.css.map */
