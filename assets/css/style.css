@@ -1498,18 +1498,55 @@ a {
   opacity: 0.4;
 }
 
-.title {
+.header {
   width: 60%;
   margin: 0 auto;
   text-align: center;
 }
-.title h2 {
+.header h2 {
   margin-bottom: 10px;
   font-size: 33px;
   color: #383838;
   font-weight: 700;
 }
-.title p {
+.header p {
   color: #777;
   font-size: 14px;
+}
+
+#intro .map-area {
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, 0.12) !important;
+  width: 100%;
+  padding: 16px;
+}
+#intro .map-area iframe {
+  width: 100% !important;
+  height: 300px !important;
+}
+#intro .map-area .bottom {
+  padding: 15px 0;
+}
+#intro .map-area .bottom .contact-area-wrapper {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+#intro .map-area .bottom .contact-area-wrapper i {
+  color: #EF6C00;
+  font-size: 23px;
+}
+#intro .map-area .bottom .contact-area-wrapper .text {
+  margin-left: 10px;
+}
+#intro .map-area .bottom .contact-area-wrapper .text h4 {
+  margin: 0 !important;
+  font-size: 16px;
+  font-weight: bold;
+}
+#intro .map-area .bottom .contact-area-wrapper .text p {
+  font-size: 14px;
+}
+#intro .map-area .bottom .inputs-area {
+  margin-left: 80px;
 }/*# sourceMappingURL=style.css.map */

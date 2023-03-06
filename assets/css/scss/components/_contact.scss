@@ -1,0 +1,42 @@
+@import '../partials/mixins';
+@import '../partials/variables';
+
+#intro {
+    .map-area {
+        box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, .1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, .12) !important;
+        width: 100%;
+        padding: 16px;
+        iframe {
+            width: 100% !important;
+            height: 300px  !important;
+        }
+        .bottom{
+            padding: 15px 0;
+            .contact-area-wrapper{
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #ddd;
+                padding: 20px 0;
+                i{
+                    color: $nativeColor;
+                    font-size: 23px;
+                }
+                .text{
+                    margin-left: 10px;
+                    h4{
+                        margin: 0 !important;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+            .inputs-area{
+                margin-left: 80px;
+            }
+        }
+        
+    }
+}

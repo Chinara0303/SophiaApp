@@ -114,6 +114,9 @@ cardBtns.forEach(cardBtn => {
     getProductsCount();
     getProductsInfo();
 
+    let deleteBtns = document.querySelectorAll(".delete");
+    deleteProductByDeleteIcon(deleteBtns);
+
   })
 
 })
@@ -129,8 +132,10 @@ function getProductsCount() {
 getProductsCount();
 getProductsInfo();
 
+
+
 function getProductsInfo() {
-  document.querySelector(".products-info").innerHTML = " ";
+  document.querySelector(".products-info").innerHTML = "";
   for (const product of products) {
     message.classList.add("d-none");
     subtotal.classList.remove("d-none");
@@ -168,42 +173,43 @@ function total() {
   document.querySelector(".subtotal-price").innerText = `$${sum}.00`;
   document.querySelector(".bottomSubtotal").innerText = `$${sum}.00`;
 }
-
-let deleteBtns = document.querySelectorAll(".delete");
+function deleteProductByDeleteIcon(deleteBtns) {
+  deleteBtns.forEach(deleteBtn => {
+    deleteBtn.addEventListener("click", function () {
+      for (const product of products) {
+        if (product.id == deleteBtn.parentNode.parentNode.getAttribute("data-id")) {
+          del(product.id);
+          if(tableBody != null){
+           for (const tableBodyElement of tableBody.children) {
+             if(tableBodyElement.getAttribute("data-id")==deleteBtn.parentNode.parentNode.getAttribute("data-id")){
+                tableBodyElement.remove();
+                localStorage.clear();
+              }
+           }
+          }
+          deleteBtn.parentNode.parentNode.remove();
+          getProductsCount();
+          total();
+          if (products.length == 0) {
+            localStorage.clear();
+            tableArea.classList.add("d-none");
+            msg.classList.remove("d-none");
+            message.classList.remove("d-none");
+            subtotal.classList.add("d-none")
+          }
+        }
+      }
+    })
+  })
+}
 
 function del(id) {
+  debugger
   let existProducts = products.filter(p => p.id != id);
   products = existProducts;
   localStorage.setItem("basket", JSON.stringify(products))
 }
 
-deleteBtns.forEach(deleteBtn => {
-  deleteBtn.addEventListener("click", function () {
-    for (const product of products) {
-      if (product.id == deleteBtn.parentNode.parentNode.getAttribute("data-id")) {
-        del(product.id);
-        if(tableBody != null){
-         for (const tableBodyElement of tableBody.children) {
-           if(tableBodyElement.getAttribute("data-id")==deleteBtn.parentNode.parentNode.getAttribute("data-id")){
-              tableBodyElement.remove();
-              localStorage.clear();
-            }
-         }
-        }
-        deleteBtn.parentNode.parentNode.remove();
-        getProductsCount();
-        total();
-        if (products.length == 0) {
-          localStorage.clear();
-          tableArea.classList.add("d-none");
-          msg.classList.remove("d-none");
-          message.classList.remove("d-none");
-          subtotal.classList.add("d-none")
-        }
-      }
-    }
-  })
-})
 
 let incrementCountBtns = document.querySelectorAll(".increment");
 incrementCount();
