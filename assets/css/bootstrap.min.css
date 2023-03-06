@@ -806,9 +806,9 @@ progress {
 @media (min-width:992px) {
 
     .container,
-    .container-lg,
+    .container-sm,
     .container-md,
-    .container-sm {
+    .container-lg {
         max-width: 960px
     }
 }

@@ -50,6 +50,8 @@ $(document).ready(function () {
   $(document).on("click", ".eye-btn", function (e) {
     e.preventDefault()
     $(".product-modal").removeClass("d-none");
+    $("body").css("overflow","hidden");
+    $(".fixed-modal").removeClass("d-none");
     $(".overlay").css("display", "block");
 
     let img = $(this).parent().prev().children().eq(0).children().eq(0).attr("src");
@@ -66,7 +68,9 @@ $(document).ready(function () {
   })
 
   $(document).on("click", ".close-icon", function () {
-    $(".product-modal").addClass("d-none");
+    $(".product-modal").removeClass("d-none");
+    $("body").css("overflow","unset");
+    $(".fixed-modal").addClass("d-none");
     $(".overlay").css("display", "none");
   })
 

@@ -61,7 +61,7 @@ $(document).ready(function () {
   $(document).on("click", ".overlay", function () {
     $(".menu").removeClass("active-menu");
     $(".overlay").css("display", "none");
-    $(".product-modal").addClass("d-none");
+    $(".fixed-modal").addClass("d-none");
   })
   $(document).on("click", ".colorless-overlay", function () {
     $(".colorless-overlay").css("display", "none");
@@ -69,8 +69,11 @@ $(document).ready(function () {
     $(".languages").addClass("d-none");
     $(".basket-desc-area").addClass("d-none");
   })
-
-
+  //fixed-modal
+  $(document).on("click", ".fixed-modal", function () {
+    $(".fixed-modal").addClass("d-none");
+    $(".overlay").css("display", "none");
+  })
 
 });
 
