@@ -428,6 +428,9 @@
   #center .center-area .rigth-area {
     justify-content: space-around !important;
   }
+  #center .center-area img {
+    width: auto !important;
+  }
   #center .basket-desc-area {
     width: 29% !important;
     top: 246px !important;
@@ -544,6 +547,9 @@
   #center .center-area .rigth-area {
     justify-content: space-around !important;
   }
+  #center .center-area img {
+    width: auto !important;
+  }
   #center .basket-desc-area {
     width: 45% !important;
     top: 246px !important;
@@ -616,6 +622,9 @@
   .expert .social-links-area {
     height: 10% !important;
   }
+  #intro .map-area .bottom .inputs-area {
+    margin-left: 0 !important;
+  }
 }
 p {
   margin: 0 !important;
@@ -663,13 +672,17 @@ a {
   font-family: Roboto, Helvetica Neue, sans-serif;
   padding: 15px 0;
 }
+#breadcrumb-area a {
+  color: #333;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 #breadcrumb-area span {
   color: #333;
   font-size: 13px;
   text-transform: uppercase;
-  font-weight: 500;
-}
-#breadcrumb-area span:last-child {
+  font-weight: bold;
   float: right;
 }
 
@@ -1552,6 +1565,7 @@ a {
 }
 
 #intro .blogs {
+  padding: 0 0 60px 0;
   margin-top: 20px;
 }
 #intro .blogs .left-side {
@@ -1621,7 +1635,7 @@ a {
   color: white;
 }
 #intro .blogs .right-side .latest-news {
-  margin-top: 8px;
+  margin-top: 30px;
 }
 #intro .blogs .right-side .latest-news ul {
   margin-top: 26px;
@@ -1649,7 +1663,7 @@ a {
   font-size: 14px;
 }
 #intro .blogs .right-side .widget {
-  margin-top: 8px;
+  margin-top: 30px;
 }
 #intro .blogs .right-side .widget .text {
   margin-top: 20px;
@@ -1710,12 +1724,13 @@ a {
   bottom: -0.6875rem;
 }
 
-form .group {
+form .group, .order .group {
   position: relative;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 form .group input,
-form .group textarea {
+form .group textarea, .order .group input,
+.order .group textarea {
   font-size: 14px;
   display: block;
   width: 100%;
@@ -1725,24 +1740,28 @@ form .group textarea {
 }
 form .group input:focus ~ label, form .group input:valid ~ label,
 form .group textarea:focus ~ label,
-form .group textarea:valid ~ label {
+form .group textarea:valid ~ label, .order .group input:focus ~ label, .order .group input:valid ~ label,
+.order .group textarea:focus ~ label,
+.order .group textarea:valid ~ label {
   top: -8px;
-  font-size: 10px;
+  font-size: 12px;
 }
 form .group input:focus ~ .bar::before, form .group input:focus ~ .bar::after,
 form .group textarea:focus ~ .bar::before,
-form .group textarea:focus ~ .bar::after {
+form .group textarea:focus ~ .bar::after, .order .group input:focus ~ .bar::before, .order .group input:focus ~ .bar::after,
+.order .group textarea:focus ~ .bar::before,
+.order .group textarea:focus ~ .bar::after {
   width: 50%;
 }
-form .group input {
+form .group input, .order .group input {
   padding: 10px 0 10px 5px;
 }
-form .group textarea {
+form .group textarea, .order .group textarea {
   height: 110px;
   padding: 10px 0 0 5px;
-  resize: none;
+  resize: vertical;
 }
-form .group label {
+form .group label, .order .group label {
   color: #999;
   font-size: 14px;
   position: absolute;
@@ -1751,12 +1770,12 @@ form .group label {
   top: 10px;
   transition: 0.4s ease all;
 }
-form .group .bar {
+form .group .bar, .order .group .bar {
   position: relative;
   display: block;
   width: 100%;
 }
-form .group .bar::before, form .group .bar::after {
+form .group .bar::before, form .group .bar::after, .order .group .bar::before, .order .group .bar::after {
   content: "";
   height: 2px;
   width: 0;
@@ -1766,19 +1785,19 @@ form .group .bar::before, form .group .bar::after {
   transition: 0.2s ease all;
   z-index: 1;
 }
-form .group .bar::before {
+form .group .bar::before, .order .group .bar::before {
   left: 50%;
 }
-form .group .bar::after {
+form .group .bar::after, .order .group .bar::after {
   right: 50%;
 }
-form .group .validation {
+form .group .validation, .order .group .validation {
   font-size: 10px;
   color: red;
   transition: 0.4s;
   opacity: 0;
 }
-form button {
+form button, .order button {
   width: 100px;
   height: 45px;
   color: white;
@@ -1789,4 +1808,123 @@ form button {
   margin-bottom: 20px;
   font-weight: bold;
   cursor: pointer;
+  font-size: 12px;
+}
+
+#login-register {
+  padding: 30px 0;
+}
+#login-register .login button {
+  margin: 5px 0 0 0;
+}
+#login-register .login-register-area {
+  padding: 20px;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, 0.12) !important;
+}
+#login-register .login-register-area .register button {
+  margin: 15px 0 0 0;
+}
+#login-register .login-register-area .register form p {
+  font-size: 13px;
+}
+#login-register .login-register-area .register form .first {
+  margin-top: 27px !important;
+}
+#login-register .login-register-area .register form .second {
+  margin-top: 14px !important;
+}
+#login-register h3 {
+  font-size: 25px;
+  font-weight: 600;
+  position: relative;
+}
+#login-register h3:before {
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 0.0625rem;
+  bottom: -0.65625rem;
+  background-color: #f6f6f6;
+}
+#login-register h3::after {
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 2.5rem;
+  height: 1px;
+  background-color: #222;
+  bottom: -0.6875rem;
+}
+
+#billing-area .billing-details .fullname-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#billing-area .billing-details .fullname-area .group {
+  width: 49%;
+}
+#billing-area .billing-details .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#billing-area .billing-details .wrapper .group {
+  width: 48%;
+}
+#billing-area .billing-details .add-info h3 {
+  font-size: 28px;
+  text-align: left;
+  color: #383838;
+  margin-bottom: 0px !important;
+}
+#billing-area .billing-details .add-info p {
+  color: #777 !important;
+}
+#billing-area .billing-details button {
+  width: 130px !important;
+}
+#billing-area .billing-details .order {
+  border: 1px solid #d9d9d9;
+  padding: 30px;
+}
+#billing-area .billing-details .order .title {
+  position: relative;
+  padding-bottom: 25px;
+  color: #444;
+  font-weight: 500;
+  font-size: 20px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+#billing-area .billing-details .order span {
+  position: relative;
+  width: 35%;
+  float: right;
+  font-size: 14px;
+}
+#billing-area .billing-details .order ul {
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+#billing-area .billing-details .order .total li span {
+  position: relative;
+  font-size: 20px;
+  line-height: 20px;
+  color: #f33927;
+  font-weight: 400;
+  width: 35%;
+  float: right;
+}
+#billing-area .billing-details .order .radio-btns input {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+#billing-area .billing-details .order .payment label {
+  color: #848484;
+  font-size: 13px;
 }/*# sourceMappingURL=style.css.map */

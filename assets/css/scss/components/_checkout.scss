@@ -1,0 +1,98 @@
+#billing-area {
+    .billing-details {
+        .fullname-area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .group {
+                width: 49%;
+            }
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .group {
+                width: 48%;
+            }
+        }
+
+        .add-info {
+            h3 {
+                font-size: 28px;
+                text-align: left;
+                color: #383838;
+                margin-bottom: 0px !important;
+            }
+
+            p {
+                color: #777 !important;
+            }
+        }
+
+        button {
+            width: 130px !important;
+        }
+
+        .order {
+            border: 1px solid #d9d9d9;
+            padding: 30px;
+
+            .title {
+                position: relative;
+                padding-bottom: 25px;
+                color: #444;
+                font-weight: 500;
+                font-size: 20px;
+                border-bottom: 1px solid #e5e5e5;
+                margin-bottom: 20px;
+
+            }
+
+            span {
+                position: relative;
+                width: 35%;
+                float: right;
+                font-size: 14px;
+            }
+
+            ul {
+                position: relative;
+                border-bottom: 1px solid #e5e5e5;
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+            }
+
+            .total {
+                li {
+                    span {
+                        position: relative;
+                        font-size: 20px;
+                        line-height: 20px;
+                        color: #f33927;
+                        font-weight: 400;
+                        width: 35%;
+                        float: right;
+                    }
+                }
+            }
+
+            .radio-btns {
+                input {
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 5px;
+                }
+            }
+            .payment{
+                label{
+                   color:  #848484;
+                   font-size: 13px;
+                }
+            }
+        }
+    }
+}

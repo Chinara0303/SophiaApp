@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Document</title>
+    <title>Checkout</title>
 </head>
 <body>
      <!-- start header -->
@@ -26,7 +26,7 @@
                              <li><a href="contact.html">Contact</a></li>
                              <li><a href="blog.html">Blog</a></li>
                              <li class="last-menu  d-flex align-items-center justify-content-between"><a class=""
-                                     href="">Pages </a>
+                                     href="#">Pages </a>
                                  <i class="fa-solid fa-chevron-down"></i>
                                  <div class="sub-menu d-none">
                                      <ul>
@@ -107,7 +107,7 @@
                      <div class="row">
                          <div class="col-lg-2 col-sm-12 col-md-12">
                              <div class="logo">
-                                <a href="home.html"> <img src="./assets/images/logo/logo-white.png" alt=""></a>
+                                 <a href="home.html"> <img src="./assets/images/logo/logo-white.png" alt=""></a>
                              </div>
                          </div>
                          <div class="col-lg-6 col-sm-12 col-md-12">
@@ -136,27 +136,27 @@
                                      <p class="bottomSubtotal">$0.00</p>
                                  </div>
                                  <div class="basket-desc-area d-none">
-                                    <div class="title d-flex align-items-center justify-content-between">
-                                        <a href="basket.html">
-                                            <p>CHECK CARD</p>
-                                        </a>
-                                        <p>
-                                            <span class="prod-count">0</span>
-                                            <span>Item</span>
-                                        </p>
-                                    </div>
-                       
-                                    <div class="products-info">
-                                    
-                                    </div>
-                                    <p class="message d-flex align-items-center justify-content-center">
-                                        Please add product
-                                    </p>
-                                    <div class="subtotal d-none d-flex align-items-center justify-content-between">
-                                        <span>Subtotal:</span>
-                                        <span class="subtotal-price"></span>
-                                    </div>
-                                </div>
+                                     <div class="title d-flex align-items-center justify-content-between">
+                                         <a href="basket.html">
+                                             <p>CHECK CARD</p>
+                                         </a>
+                                         <p>
+                                             <span class="prod-count">0</span>
+                                             <span>Item</span>
+                                         </p>
+                                     </div>
+ 
+                                     <div class="products-info">
+ 
+                                     </div>
+                                     <p class="message d-flex align-items-center justify-content-center">
+                                         Please add product
+                                     </p>
+                                     <div class="subtotal d-none d-flex align-items-center justify-content-between">
+                                         <span>Subtotal:</span>
+                                         <span class="subtotal-price"></span>
+                                     </div>
+                                 </div>
                              </div>
                          </div>
                      </div>
@@ -171,7 +171,7 @@
                          <li><a href="about.html">About</a></li>
                          <li><a href="contact.html">Contact</a></li>
                          <li><a href="blog.html">Blog</a></li>
-                         <li class="last-menu"><a href="">Pages <i class="fa-solid fa-caret-down ms-2"></i></a>
+                         <li class="last-menu"><a href="#">Pages <i class="fa-solid fa-caret-down ms-2"></i></a>
                              <div class="sub-menu d-none">
                                  <ul>
                                      <li><a href="about.html">About us</a></li>
@@ -180,73 +180,172 @@
                                      <li><a href="">Wishlist</a></li>
                                      <li><a href="">Testimonials <span>NEW</span> </a></li>
                                      <li><a href="">Compare</a></li>
-                                     <li><a href="">Checkout</a></li>
+                                     <li><a href="checkout.html">Checkout</a></li>
                                      <li><a href="basket.html">Cart</a></li>
                                      <li><a href="account.html">My Account</a></li>
                                      <li><a href="">404</a></li>
                                  </ul>
                              </div>
                          </li>
- 
                      </ul>
                  </div>
              </div>
          </section>
      </header>
      <!-- end header -->
-
      <main>
         <section id="breadcrumb-area">
             <div class="container">
-                <a href="basket.html">Cart</a>
+                <a href="checkout.html">Checkout</a>
                 <span>
                     <a href="home.html">Home / </a>
-                    <a href="basket.html"> Cart</a> 
+                    <a href="checkout.html"> Checkout</a> 
                 </span>
             </div>
             <hr>
         </section>
-        <section id="main">
+        <section id="billing-area">
             <div class="container">
-                <div class="table-area d-none">
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">Product</th>
-                            <th scope="col">Name </th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Total</th>
-                            <th scope="col">Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                         
-                        </tbody>
-                    </table>
-                    <div class="footer d-flex align-items-center justify-content-between">
-                       <button>Continue Shopping</button>
-                        <div class="footer-right">
-                            <span class="total-price"> </span>
-                            <button class="checkout" href="">Proceed To Checkout</button>
+                <div class="billing-details">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <h2>Billing Details</h2>
+                            <form>
+                                <div class="fullname-area">
+                                    <div class="group inputs">
+                                        <input required type="text">
+                                        <span class="bar"></span>
+                                        <label>First name (required) *</label>
+                                        <span class="validation">Please enter a valid message</span>
+                                    </div>
+        
+                                    <div class="group inputs">
+                                        <input required type="text">
+                                        <span class="bar"></span>
+                                        <label>Last name (required) *</label>
+                                        <span class="validation">Please enter a valid message</span>
+                                    </div>
+                                </div>
+                              
+    
+                                <div class="group inputs">
+                                    <input required type="text">
+                                    <span class="bar"></span>
+                                    <label>Company name (optional)</label>
+                                    <span class="validation">Please enter a valid message</span>
+                                </div>
+                                <div class="group inputs">
+                                    <input required type="text">
+                                    <span class="bar"></span>
+                                    <label>Address</label>
+                                    <span class="validation">Please enter a valid message</span>
+                                </div>
+
+                                <div class="group inputs">
+                                    <input required type="text">
+                                    <span class="bar"></span>
+                                    <label>Town/city</label>
+                                    <span class="validation">Please enter a valid message</span>
+                                </div>
+
+                                <div class="wrapper">
+                                    <div class="group inputs">
+                                        <input required type="text">
+                                        <span class="bar"></span>
+                                        <label>State / Country (required)</label>
+                                        <span class="validation">Please enter a valid message</span>
+                                    </div>
+                                    <div class="group inputs">
+                                        <input required type="text">
+                                        <span class="bar"></span>
+                                        <label>Postcode / zip (required)</label>
+                                        <span class="validation">Please enter a valid message</span>
+                                    </div>
+                                    <div class="group inputs">
+                                        <input required type="text">
+                                        <span class="bar"></span>
+                                        <label>Email Address (required)</label>
+                                        <span class="validation">Please enter a valid message</span>
+                                    </div>
+                                    <div class="group inputs">
+                                        <input required type="text">
+                                        <span class="bar"></span>
+                                        <label>Phone (required)</label>
+                                        <span class="validation">Please enter a valid message</span>
+                                    </div>
+                                </div>
+                                <div class="add-info">
+                                    <h3>Additional information</h3>
+                                    <p class="text-muted">Order notes (optional)</p>
+                                </div>
+                                
+                                <div class="group textarea">
+                                    <textarea></textarea>
+                                    <span class="bar"></span>
+                                    <label>Post content</label>
+                                </div>
+    
+                                <button type="submit">Submit Review</button>
+                            </form>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="order">
+                                <div class="title">
+                                    Product
+                                    <span>Total</span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        Headset Perro × 5 
+                                        <span> $440.00 </span>
+                                    </li>
+                                </ul >
+                                <ul  class="total">
+                                    <li>
+                                        Subtotal 
+                                        <span> $440.00 </span>
+                                    </li>
+                                    <li class="d-flex align-items-center justify-content-between">
+                                        Shipping 
+                                        <div class="radio-btns">
+                                            <div class="d-flex align-items-center justify-content-between mt-2">
+                                                <input type="radio" name="an">
+                                                <label for="">Create an account</label>
+                                            </div>
+                                           <div>
+                                            <input type="radio" name="an">
+                                            <label for="">Flat Rate</label>
+                                           </div>
+                                           
+
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="total">
+                                    <li>
+                                        Total 
+                                        <span> $440.00 </span>
+                                    </li>
+                                </ul>
+                                <div class="payment">
+                                    <input type="radio" name="an">
+                                    <label for="">Direct Bank Transfer</label>
+                                    <div class="bottom">
+                                        <input type="radio" name="an">
+                                        <label for="">PayPal</label>
+                                    </div>
+                                </div>
+                              <button>PLACE ORDER</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="msg">
-                    <div class="empty-msg">
-                        <p>YOU HAVE NO ITEMS IN YOUR SHOPPING CART.</p>
-                    </div>
-                    <button >Continue Shopping</button>
-                 </div>
             </div>
         </section>
+
      </main>
-
-
-
-
       <!-- footer -->
-      <footer>
+    <footer>
         <section id="footer">
             <div class="container">
                 <div class="row">
@@ -315,13 +414,18 @@
             </div>
         </section>
     </footer>
-    <script src="https://kit.fontawesome.com/5c10bc189f.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./assets/js/common.js"></script>
-    <script src="./assets/js/basket.js"></script>
-
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+     crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+     integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+     crossorigin="anonymous"></script>
+ <script src="https://kit.fontawesome.com/5c10bc189f.js" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+     integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <script src="./assets/js/common.js"></script>
+ <script src="./assets/js/form.js"></script>
 </body>
 </html>

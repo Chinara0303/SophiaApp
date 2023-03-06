@@ -33,6 +33,9 @@
             .rigth-area {
                 justify-content: space-around !important;
             }
+            img{
+                width: auto !important;
+            }
         }
 
         .basket-desc-area {
@@ -217,6 +220,9 @@
             .rigth-area {
                 justify-content: space-around !important;
             }
+            img{
+                width: auto !important;
+            }
         }
 
         .basket-desc-area {
@@ -327,4 +333,14 @@
             height: 10% !important;
         }
     }
+
+    #intro{
+        .map-area{
+            .bottom{
+                .inputs-area {
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    } 
 }
