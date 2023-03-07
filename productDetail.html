@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/slick-slider/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="./assets/css/slick-slider/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Product Detail</title>
+</head>
+
+<body>
+    <!-- start header -->
+    <div class="overlay"></div>
+    <div class="colorless-overlay"></div>
+    <header>
+        <section id="top">
+            <div class="container">
+                <div class="top-area d-flex align-items-center justify-content-between">
+                    <i class="fa-solid fa-bars open-icon  d-lg-none"></i>
+                    <div class="menu d-lg-none">
+                        <i class="fa-solid fa-xmark close-icon"></i>
+                        <div class="line"></div>
+                        <ul class="menues">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li class="last-menu  d-flex align-items-center justify-content-between"><a class=""
+                                    href="">Pages </a>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="sub-menu d-none">
+                                    <ul>
+                                        <li><a href="about.html">About us</a></li>
+                                        <li><a href="">FAQ</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="">Wishlist</a></li>
+                                        <li><a href="">Testimonials </a></li>
+                                        <li><a href="">Compare</a></li>
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                        <li><a href="basket.html">Cart</a></li>
+                                        <li><a href="account.html">My Account</a></li>
+                                        <li><a href="">404</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="top-left">
+                        <div class="select">
+                            <div class="title-currency d-flex align-items-center">
+                                <p class="usd">USD</p>
+                                <i class="fa-solid fa-caret-down ms-2"></i>
+                            </div>
+                            <div class="currency d-none">
+                                <button class="usd-btn">
+                                    <p>USD</p>
+                                </button>
+                                <button class="eur-btn">
+                                    <p>EUR</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="lang">
+                            <div class="title-lang d-flex align-items-center">
+                                <img src="./assets/images/flags/en.svg" alt="">
+                                <p class="en d-none d-lg-block">English</p>
+                                <i class="fa-solid fa-caret-down ms-2"></i>
+                            </div>
+                            <div class="languages d-none">
+                                <div class="item">
+                                    <img src="./assets/images/flags/en.svg" alt="">
+                                    <p>English</p>
+                                </div>
+                                <div class="item">
+                                    <img src="./assets/images/flags/gr.svg" alt="">
+                                    <p>German</p>
+                                </div>
+                                <div class="item">
+                                    <img src="./assets/images/flags/fr.svg" alt="">
+                                    <p>French</p>
+                                </div>
+                                <div class="item">
+                                    <img src="./assets/images/flags/ru.svg" alt="">
+                                    <p>Russian</p>
+                                </div>
+                                <div class="item">
+                                    <img src="./assets/images/flags/tr.svg" alt="">
+                                    <p>Turkish</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-right ">
+                        <ul class="d-flex align-items-center">
+                            <li><a href=""><i class="fa-regular fa-heart"></i> <span>Wishlist</span> </a></li>
+                            <li><a href="#"><i class="fa-solid fa-arrows-rotate"></i> <span>Compare</span> </a></li>
+                            <li><a href="account.html"><i class="fa-solid fa-user"></i> <span>My Account</span> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="center">
+            <div class="container">
+                <div class="center-area">
+                    <div class="row">
+                        <div class="col-lg-2 col-sm-12 col-md-12">
+                            <div class="logo">
+                                <a href="home.html"><img src="./assets/images/logo/logo-white.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 col-md-12">
+                            <div class="search-area">
+                                <div class="search d-flex justify-content-between ">
+                                    <input type="text" placeholder="Type to search...">
+                                    <button>Search</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 col-md-12">
+                            <div class="rigth-area d-flex justify-content-around align-items-center ">
+                                <div class="callback d-flex">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div class="helpline">
+                                        <p>Helpline:</p>
+                                        <a href="tel:">02(981)336 111</a>
+                                    </div>
+                                </div>
+                                <div class="shopping-cart">
+                                    <p class="product-count"></p>
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <p class="bottomSubtotal">$0.00</p>
+                                </div>
+                                <div class="basket-desc-area d-none">
+                                    <div class="title d-flex align-items-center justify-content-between">
+                                        <a href="basket.html">
+                                            <p>CHECK CARD</p>
+                                        </a>
+                                        <p>
+                                            <span class="prod-count">0</span>
+                                            <span>Item</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="products-info">
+
+                                    </div>
+                                    <p class="message d-flex align-items-center justify-content-center">
+                                        Please add product
+                                    </p>
+                                    <div class="subtotal d-none d-flex align-items-center justify-content-between">
+                                        <span>Subtotal:</span>
+                                        <span class="subtotal-price"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="bottom" class="d-none d-lg-block">
+            <div class="container">
+                <div class="bottom-area">
+                    <ul class="menues d-flex align-items-center justify-content-between">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li class="last-menu"><a href="">Pages <i class="fa-solid fa-caret-down ms-2"></i></a>
+                            <div class="sub-menu d-none">
+                                <ul>
+                                    <li><a href="about.html">About us</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="">Wishlist</a></li>
+                                    <li><a href="">Testimonials <span>NEW</span> </a></li>
+                                    <li><a href="">Compare</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="basket.html">Cart</a></li>
+                                    <li><a href="account.html">My Account</a></li>
+                                    <li><a href="">404</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- end header -->
+
+    <main>
+        <section id="breadcrumb-area">
+            <div class="container">
+                <span class="prod-name"></span>
+                <span>
+                    <a href="home.html">Home / </a>
+                    <a href="blog.html"> Blog</a>
+                </span>
+            </div>
+            <hr>
+        </section>
+        <div class="fixed-modal">
+            <div class="zoom-modal ">
+                <div class="close-icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="zoom-modal-area">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+
+        <section id="detail-intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="left-side">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="img">
+                                        <img src="" alt="">
+                                        <i class="fa-solid fa-magnifying-glass-plus zoom"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="information">
+                                        <h2></h2>
+                                        <div class="prices">
+                                            <div class="discount d-flex align-items-center">
+                                                <del class="text-muted"></del>
+                                                <p>50% OFF</p>
+                                            </div>
+                                            <div class="native-price">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <p class="description">Lorem Ipsum is simply dummy text of the
+                                                printing and typesetting industry. Lorem Ipsum has been the
+                                                industrys standard dummy text ever since the 1500s, when an
+                                                unknown printer took a galley of type and scrambled it to
+                                                make a type specimen book.</p>
+                                        </div>
+                                        <div class="avialibility">
+                                            <span>Avalibility:</span>
+                                            <span>In Stock</span>
+                                        </div>
+                                        <div class="quantity">
+                                            <span>Quantity</span>
+                                        </div>
+                                        <div class="bottom ">
+                                            <div class="bottom-left">
+                                                <button class="decrement"><i class="fa-solid fa-minus "></i></button>
+                                                <input type="number" min="1" value="1">
+                                                <button class="increment"><i class="fa-solid fa-plus "></i></button>
+                                            </div>
+                                            <div class="btns">
+                                                <button>Add to card</button>
+                                                <button>Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <section id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="content">
+                            <div class="logo">
+                                <img src="./assets/images/logo/logo-02-01.png" alt="">
+                            </div>
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada
+                                    fringilla sem, at dictum lectus ultricies quis. Etiam eu bibendum orci. Aliquam
+                                    erat volutpat.</p>
+                                <a href="#">More about us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="content">
+                            <h5>Services</h5>
+                            <ul class="services-content">
+                                <li><a href="#">Hotel Growth</a></li>
+                                <li><a href="#">Hotel Loan</a></li>
+                                <li><a href="#">Financial Planning</a></li>
+                                <li><a href="#">Insurance Consulting</a></li>
+                                <li><a href="#">Retirenment Planing</a></li>
+                                <li><a href="#">Tax Planing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="content">
+                            <h5>Subscribe Newsletter</h5>
+                            <p>Get latest updates and offers.</p>
+                            <div class="inp-btn">
+                                <input type="text" placeholder="Enter your email address">
+                                <button>SUBSCRIBE US</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="content">
+                            <h5>Contact us</h5>
+                            <div class="content-bar">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>Apple St, New York, NY 10012, USA</p>
+                            </div>
+                            <div class="content-bar">
+                                <i class="fa-solid fa-phone"></i>
+                                <p>
+                                    ( 018) 65 524 8503 / (125) 954 7854</p>
+                            </div>
+                            <div class="content-bar">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p>
+                                    contact@lamarena.com</p>
+                            </div>
+                            <ul class="social-links">
+                                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/css/slick-slider/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/css/slick-slider/slick-1.8.1/slick/slick.js"></script>
+    <script src="https://kit.fontawesome.com/5c10bc189f.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/products-detail.js"></script>
+</body>
+
+</html>

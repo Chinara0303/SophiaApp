@@ -50,7 +50,6 @@ $(document).ready(function () {
     $(".overlay").css("display", "none");
   })
 
-
   //BASKET MODAL
   $(document).on("click", ".shopping-cart", function () {
     $(".basket-desc-area").toggleClass("d-none");
@@ -63,6 +62,7 @@ $(document).ready(function () {
     $(".overlay").css("display", "none");
     $(".fixed-modal").addClass("d-none");
   })
+
   $(document).on("click", ".colorless-overlay", function () {
     $(".colorless-overlay").css("display", "none");
     $(".currency").addClass("d-none");
@@ -73,7 +73,9 @@ $(document).ready(function () {
   $(document).on("click", ".fixed-modal", function () {
     $(".fixed-modal").addClass("d-none");
     $(".overlay").css("display", "none");
+    $("body").css("overflow", "unset");
   })
+
 
 });
 
@@ -135,8 +137,6 @@ function getProductsCount() {
 getProductsCount();
 getProductsInfo();
 
-
-
 function getProductsInfo() {
   document.querySelector(".products-info").innerHTML = "";
   for (const product of products) {
@@ -176,19 +176,22 @@ function total() {
   document.querySelector(".subtotal-price").innerText = `$${sum}.00`;
   document.querySelector(".bottomSubtotal").innerText = `$${sum}.00`;
 }
+let deleteBtns = document.querySelectorAll(".delete");
+
+deleteProductByDeleteIcon(deleteBtns)
 function deleteProductByDeleteIcon(deleteBtns) {
   deleteBtns.forEach(deleteBtn => {
     deleteBtn.addEventListener("click", function () {
       for (const product of products) {
         if (product.id == deleteBtn.parentNode.parentNode.getAttribute("data-id")) {
           del(product.id);
-          if(tableBody != null){
-           for (const tableBodyElement of tableBody.children) {
-             if(tableBodyElement.getAttribute("data-id")==deleteBtn.parentNode.parentNode.getAttribute("data-id")){
+          if (tableBody != null) {
+            for (const tableBodyElement of tableBody.children) {
+              if (tableBodyElement.getAttribute("data-id") == deleteBtn.parentNode.parentNode.getAttribute("data-id")) {
                 tableBodyElement.remove();
                 localStorage.clear();
               }
-           }
+            }
           }
           deleteBtn.parentNode.parentNode.remove();
           getProductsCount();
@@ -207,7 +210,6 @@ function deleteProductByDeleteIcon(deleteBtns) {
 }
 
 function del(id) {
-  debugger
   let existProducts = products.filter(p => p.id != id);
   products = existProducts;
   localStorage.setItem("basket", JSON.stringify(products))

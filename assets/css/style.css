@@ -870,6 +870,7 @@ a {
   width: 100%;
   height: 100%;
   z-index: 2;
+  display: none;
 }
 .fixed-modal .product-modal {
   width: 65%;
@@ -880,7 +881,8 @@ a {
   border-radius: 5px;
   box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
 }
-.fixed-modal .product-modal .modal-area .close-icon {
+
+.close-icon {
   position: absolute;
   top: -25px;
   right: -22px;
@@ -896,78 +898,79 @@ a {
   cursor: pointer;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
-.fixed-modal .product-modal .modal-area .information {
+
+.information {
   padding: 18px;
 }
-.fixed-modal .product-modal .modal-area .information h2 {
+.information h2 {
   font-size: 40px;
 }
-.fixed-modal .product-modal .modal-area .information .prices .discount del {
+.information .prices .discount del {
   font-size: 25px;
   margin-right: 10px;
   font-weight: 500;
 }
-.fixed-modal .product-modal .modal-area .information .prices .discount p {
+.information .prices .discount p {
   font-size: 28px;
   color: #f33927;
   font-weight: 500;
 }
-.fixed-modal .product-modal .modal-area .information .prices .native-price {
+.information .prices .native-price {
   color: black;
   margin: 10px 0;
 }
-.fixed-modal .product-modal .modal-area .information .prices .native-price span {
+.information .prices .native-price span {
   font-size: 25px;
 }
-.fixed-modal .product-modal .modal-area .information .prices .native-price span:nth-child(1) {
+.information .prices .native-price span:nth-child(1) {
   margin-right: -5px;
 }
-.fixed-modal .product-modal .modal-area .information .desc {
+.information .desc {
   padding: 15px 0;
   border-bottom: 2px dashed #ddd;
   border-top: 2px dashed #ddd;
 }
-.fixed-modal .product-modal .modal-area .information .desc p:nth-child(1) {
+.information .desc p:nth-child(1) {
   font-weight: 600;
 }
-.fixed-modal .product-modal .modal-area .information .desc p:nth-child(2) {
+.information .desc p:nth-child(2) {
   line-height: 24px;
   margin-top: 5px;
   color: #777 !important;
 }
-.fixed-modal .product-modal .modal-area .information .avialibility {
+.information .avialibility {
   margin: 10px 0;
 }
-.fixed-modal .product-modal .modal-area .information .avialibility span:nth-child(1) {
+.information .avialibility span:nth-child(1) {
   color: #777;
 }
-.fixed-modal .product-modal .modal-area .information .quantity span {
+.information .quantity span {
   color: #777;
 }
-.fixed-modal .product-modal .modal-area .information .bottom {
+.information .bottom {
   margin: 15px 15px 15px 0;
 }
-.fixed-modal .product-modal .modal-area .information .bottom .bottom-left button {
+.information .bottom .bottom-left button {
   border: none;
   background-color: #fff;
 }
-.fixed-modal .product-modal .modal-area .information .bottom .bottom-left input {
+.information .bottom .bottom-left input {
   border: 1px solid #c3c3c3;
   height: 35px;
   width: 80px;
   background-color: #f6f6f6;
   text-align: center;
 }
-.fixed-modal .product-modal .modal-area .information .bottom .bottom-left input::-moz-placeholder {
+.information .bottom .bottom-left input::-moz-placeholder {
   text-align: center;
 }
-.fixed-modal .product-modal .modal-area .information .bottom .bottom-left input:-ms-input-placeholder {
+.information .bottom .bottom-left input:-ms-input-placeholder {
   text-align: center;
 }
-.fixed-modal .product-modal .modal-area .information .bottom .bottom-left input::placeholder {
+.information .bottom .bottom-left input::placeholder {
   text-align: center;
 }
-.fixed-modal .product-modal .modal-area .information .bottom .bottom-right i {
+.information .bottom .bottom-right i {
   display: inline-block;
   margin-left: 20px;
   font-size: 20px;
@@ -1237,6 +1240,7 @@ a {
   box-shadow: 2px 1px 8px -1px rgba(0, 0, 0, 0.09) !important;
   position: relative;
   transition: all 2s;
+  width: 97% !important;
 }
 .cart .img-area a {
   display: flex;
@@ -1956,4 +1960,90 @@ form button, .order button {
 #billing-area .billing-details .order .payment label {
   color: #848484;
   font-size: 13px;
+}
+
+#detail-intro {
+  font-family: Roboto, Helvetica Neue, sans-serif;
+}
+#detail-intro .left-side .img {
+  position: relative;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, 0.12) !important;
+  height: 106%;
+}
+#detail-intro .left-side .img img {
+  width: 100%;
+}
+#detail-intro .left-side .img i {
+  margin: 15px;
+  color: rgba(0, 0, 0, 0.69);
+  cursor: pointer;
+  left: 10px;
+  bottom: 10px;
+  position: absolute;
+}
+#detail-intro .left-side .information {
+  padding: 0;
+}
+#detail-intro .left-side .information .prices .discount del,
+#detail-intro .left-side .information .prices .discount p {
+  font-size: 20px;
+}
+#detail-intro .left-side .information .prices .native-price {
+  margin: 0;
+}
+#detail-intro .left-side .information .desc {
+  border-bottom: 1px dashed #ddd;
+  border-top: none !important;
+  padding: 6px 0 15px 0;
+}
+#detail-intro .left-side .information .desc .description {
+  font-size: 15px;
+  color: #777;
+  font-weight: 400;
+  line-height: 26px;
+}
+#detail-intro .left-side .information .avialibility span,
+#detail-intro .left-side .information .quantity span {
+  font-size: 14px;
+}
+#detail-intro .left-side .information .bottom .bottom-left button i {
+  color: #777;
+}
+#detail-intro .left-side .information .bottom .bottom-left input {
+  border-top: none;
+  border-bottom: none;
+  background-color: transparent;
+  width: 45px !important;
+  font-size: 12px;
+}
+#detail-intro .left-side .information .bottom .btns {
+  margin-top: 30px;
+}
+#detail-intro .left-side .information .bottom .btns button {
+  width: 34%;
+  height: 45px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  background-color: #ef6c00;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.zoom-modal {
+  width: 34%;
+  position: fixed;
+  top: 15%;
+  left: 28%;
+  background: white;
+  border-radius: 5px;
+}
+.zoom-modal img {
+  width: 100%;
+}
+.zoom-modal .zoom-modal-area {
+  overflow-y: scroll;
+  height: 400px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,119 @@
+@import '../partials/mixins';
+@import '../partials/variables';
+
+#detail-intro {
+    font-family: $fontFamily;
+
+    .left-side {
+        .img {
+            position: relative;
+            box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, .1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, .12) !important;
+                height: 106%;
+            img {
+                width: 100%;
+            }
+           
+
+            i {
+                margin: 15px;
+                color: $textColor;
+                cursor: pointer;
+                left: 10px;
+                bottom: 10px;
+                position: absolute;
+            }
+        }
+
+        .information {
+            padding: 0;
+
+            .prices {
+                .discount {
+
+                    del,
+                    p {
+                        font-size: 20px;
+                    }
+                }
+
+                .native-price {
+                    margin: 0;
+                }
+            }
+
+            .desc {
+
+                border-bottom: 1px dashed #ddd;
+                border-top: none !important;
+                padding: 6px 0 15px 0;
+
+                .description {
+                    font-size: 15px;
+                    color: #777;
+                    font-weight: 400;
+                    line-height: 26px;
+
+                }
+            }
+
+            .avialibility,
+            .quantity {
+                span {
+                    font-size: 14px;
+                }
+            }
+
+            .bottom {
+                .bottom-left {
+                    button {
+                        i {
+                            color: #777;
+                        }
+                    }
+
+                    input {
+                        border-top: none;
+                        border-bottom: none;
+                        background-color: transparent;
+                        width: 45px !important;
+                        font-size: 12px;
+                    }
+                }
+
+                .btns {
+                    margin-top: 30px;
+                    button {
+                        width: 34%;
+                        height: 45px;
+                        color: white;
+                        border-radius: 5px;
+                        border: none;
+                        background-color: #ef6c00;
+                        font-weight: bold;
+                        cursor: pointer;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.zoom-modal {
+    width: 34%;
+    position: fixed;
+    top: 15%;
+    left: 28%;
+    background: white;
+    border-radius: 5px;
+
+    img {
+        width: 100%;
+    }
+
+    .zoom-modal-area {
+        overflow-y: scroll;
+        height: 400px;
+    }
+}
