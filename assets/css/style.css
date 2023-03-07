@@ -1968,7 +1968,6 @@ form button, .order button {
 #detail-intro .left-side .img {
   position: relative;
   box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, 0.12) !important;
-  height: 106%;
 }
 #detail-intro .left-side .img img {
   width: 100%;
@@ -2030,6 +2029,24 @@ form button, .order button {
   cursor: pointer;
   font-size: 12px;
   text-transform: uppercase;
+}
+#detail-intro .left-side .slider-area {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+#detail-intro .left-side .slider-area .box {
+  max-width: 120px;
+  max-height: 120px;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, 0.12) !important;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  position: relative;
+  padding: 16px;
+  border-radius: 4px;
+}
+#detail-intro .left-side .slider-area .box img {
+  width: 100%;
 }
 
 .zoom-modal {
