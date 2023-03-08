@@ -206,13 +206,13 @@
                 <a class="prod-name"></a>
                 <span>
                     <a href="home.html">Home / </a>
-                    <a href="blog.html"> Blog</a>
+                    <a href="blog.html"> Product</a>
                 </span>
             </div>
             <hr>
         </section>
 
-        <div class="fixed-modal">
+        <div class="fixed-zoom-modal ">
             <div class="zoom-modal ">
                 <div class="close-icon">
                     <i class="fa-solid fa-xmark"></i>
@@ -222,11 +222,61 @@
                 </div>
             </div>
         </div>
-
+        <div class="fixed-modal">
+            <div class="product-modal d-none">
+                <div class="modal-area d-flex " >
+                    <div class="close-icon">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="information">
+                        <h2></h2>
+                        <div class="prices">
+                            <div class="discount d-flex align-items-center">
+                                <del class="text-muted"></del>
+                                <p>50% OFF</p>
+                            </div>
+                            <div class="native-price">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <p>Product details</p>
+                            <p class="description">Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry. Lorem Ipsum has been the
+                                industrys standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to
+                                make a type specimen book.</p>
+                        </div>
+                        <div class="avialibility">
+                            <span>Avalibility:</span>
+                            <span>In Stock</span>
+                        </div>
+                        <div class="quantity">
+                            <span>Quantity</span>
+                        </div>
+                        <div class="bottom d-flex align-items-center justify-content-between">
+                            <div class="bottom-left">
+                                <button class="decrement"><i class="fa-solid fa-minus "></i></button>
+                                <input type="number" min="1" value="1">
+                                <button class="increment"><i class="fa-solid fa-plus "></i></button>
+                            </div>
+                            <div class="bottom-right d-flex">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
         <section id="detail-intro">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-10">
+                    <div class="col-lg-9">
                         <div class="left-side">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -642,7 +692,74 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-2"></div>
+                    <div class="col-lg-3">
+                        <div id="info" class="d-lg-block d-none">
+                            <div class="info-area">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-6 col-sm-12">
+                                        <div class="box ">
+                                            <div class="icon">
+                                                <i class="fa-solid fa-gift"></i>
+                                            </div>
+                                            <div class="text-area">
+                                                <p>BONUS PLUS</p>
+                                                <span>Get a bonus plus for buying more that three products</span>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    <div class="col-lg-12 col-md-6 col-sm-12">
+                                        <div class="box shipping">
+                                            <div class="icon">
+                                                <i class="fa-solid fa-truck"></i>
+                                            </div>
+                                            <div class="text-area">
+                                                <p>FREE SHIPPING</p>
+                                                <span>Free shipping on all orders over $99</span>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    <div class="col-lg-12 col-md-6 col-sm-12">
+                                        <div class="box ">
+                                            <div class="icon">
+                                                <i class="fa-solid fa-dollar-sign"></i>
+                                            </div>
+                                            <div class="text-area guaranteee">
+                                                <p class="guarantee">MONEY BACK GUARANTEE</p>
+                                                <span>100% money back guarantee</span>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    <div class="col-lg-12 col-md-6 col-sm-12">
+                                        <div class="box last-box">
+                                            <div class="icon">
+                                                <i class="fa-regular fa-clock"></i>
+                                            </div>
+                                            <div class="text-area">
+                                                <p>ONLINE SUPPORT 24/7</p>
+                                                <span>Call us: 02 3555 65454 55</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sale text-center d-lg-block d-none">
+                            <p>Big sale</p>     
+                            <p>do not miss it!</p>       
+                            <div class="percent d-flex align-items-center justify-content-center">
+                                <p class="num">60</p> 
+                                <div class="div">
+                                    <p>%</p>
+                                    <p>off</p>
+                                </div>
+                               
+                            </div>   
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nects.</p>                                                          
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

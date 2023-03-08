@@ -75,7 +75,11 @@ $(document).ready(function () {
     $(".overlay").css("display", "none");
     $("body").css("overflow", "unset");
   })
-
+  $(document).on("click", ".fixed-zoom-modal", function () {
+    $(".fixed-zoom-modal").addClass("d-none");
+    $(".overlay").css("display", "none");
+    $("body").css("overflow", "unset");
+  })
 
 });
 

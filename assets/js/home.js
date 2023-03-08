@@ -49,6 +49,8 @@ $(document).ready(function () {
     $(".product-modal").removeClass("d-none");
     $("body").css("overflow", "hidden");
     $(".fixed-modal").css("display", "block");
+    $(".fixed-modal").removeClass("d-none");
+
     $(".overlay").css("display", "block");
 
     let img = $(this).parent().prev().children().eq(0).children().eq(0).attr("src");
