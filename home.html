@@ -16,6 +16,9 @@
     <!-- start header -->
     <div class="overlay"></div>
     <div class="colorless-overlay"></div>
+    <div class="add-alert d-none">
+        <p></p>
+    </div>
     <header>
         <section id="top">
             <div class="container">
@@ -37,7 +40,7 @@
                                         <li><a href="about.html">About us</a></li>
                                         <li><a href="">FAQ</a></li>
                                         <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="">Wishlist</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
                                         <li><a href="">Testimonials </a></li>
                                         <li><a href="">Compare</a></li>
                                         <li><a href="checkout.html">Checkout</a></li>
@@ -97,7 +100,7 @@
                     </div>
                     <div class="top-right ">
                         <ul class="d-flex align-items-center">
-                            <li><a href=""><i class="fa-regular fa-heart"></i> <span>Wishlist</span> </a></li>
+                            <li><a href="wishlist.html"><i class="fa-regular fa-heart"></i> <span>Wishlist</span> </a></li>
                             <li><a href="#"><i class="fa-solid fa-arrows-rotate"></i> <span>Compare</span> </a></li>
                             <li><a href="account.html"><i class="fa-solid fa-user"></i> <span>My Account</span> </a></li>
                         </ul>
@@ -175,13 +178,13 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li class="last-menu"><a href="">Pages <i class="fa-solid fa-caret-down ms-2"></i></a>
+                        <li class="last-menu"><a>Pages <i class="fa-solid fa-caret-down ms-2"></i></a>
                             <div class="sub-menu d-none">
                                 <ul>
                                     <li><a href="about.html">About us</a></li>
                                     <li><a href="">FAQ</a></li>
                                     <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="">Wishlist</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
                                     <li><a href="">Testimonials <span>NEW</span> </a></li>
                                     <li><a href="">Compare</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
@@ -200,6 +203,7 @@
     <!-- end header -->
     <!-- start main -->
     <main>
+
         <!-- introduction -->
         <section id="intro-slider">
             <div class="slider-intro">
@@ -364,7 +368,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"><i class="fa-regular fa-heart"></i></a>
                                         <a class="eye-btn" href="#"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
                                     </div>
@@ -399,7 +403,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
                                     </div>
@@ -434,7 +438,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -469,7 +473,7 @@
                                         <a href="productDetail.html"><img src="./assets/images/products/headphone1.png" alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -505,7 +509,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -541,7 +545,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -576,7 +580,7 @@
                                         <a href="productDetail.html"><img src="./assets/images/products/laptop.png" alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -611,7 +615,7 @@
                                         <a href="productDetail.html"><img src="./assets/images/products/laptop (1).png" alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -650,7 +654,7 @@
                                         <a href="productDetail.html"><img src="./assets/images/products/laptop.png" alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -685,7 +689,7 @@
                                         <a href="productDetail.html"><img src="./assets/images/products/laptop (1).png" alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -721,7 +725,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -757,7 +761,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -792,7 +796,7 @@
                                         <a href="productDetail.html"><img src="./assets/images/products/headphone1.png" alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -828,7 +832,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -864,7 +868,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a class="eye-btn" href="#"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
                                     </div>
@@ -899,7 +903,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
                                     </div>
@@ -938,7 +942,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -974,7 +978,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
                                     </div>
@@ -1009,7 +1013,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -1044,7 +1048,7 @@
                                         <a href="productDetail.html"><img src="./assets/images/products/Photocamera1.png" alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -1080,7 +1084,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -1116,7 +1120,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -1151,7 +1155,7 @@
                                         <a href="productDetail.html"><img src="./assets/images/products/Photocamera4.png" alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 
@@ -1186,7 +1190,7 @@
                                         <a href="productDetail.html"><img src="./assets/images/products/Photocamera5.png" alt=""></a>
                                     </div>
                                     <div class="icons">
-                                        <a href="#"> <i class="fa-regular fa-heart"></i></a>
+                                        <a href="#" class="heart-btn"> <i class="fa-regular fa-heart"></i></a>
                                         <a href="#" class="eye-btn"> <i class="fa-solid fa-eye"></i></a>
                                         <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
 

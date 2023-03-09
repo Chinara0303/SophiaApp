@@ -35,7 +35,6 @@ $(document).ready(function () {
 
   //submenu
   $(document).on("click", ".last-menu", function (e) {
-    e.preventDefault();
     $(".sub-menu").toggleClass("d-none");
   })
 
@@ -62,6 +61,7 @@ $(document).ready(function () {
     $(".overlay").css("display", "none");
     $(".fixed-modal").addClass("d-none");
   })
+
 
   $(document).on("click", ".colorless-overlay", function () {
     $(".colorless-overlay").css("display", "none");
@@ -91,7 +91,6 @@ let subtotal = document.querySelector(".subtotal");
 let modalArea = document.querySelector(".modal-area");
 let tableBody = document.querySelector("tbody");
 let products = [];
-
 if (localStorage.getItem("basket") != null) {
   products = JSON.parse(localStorage.getItem("basket"))
 }
@@ -107,7 +106,12 @@ cardBtns.forEach(cardBtn => {
     let existProduct = products.find(p => p.id == prodId);
     if (existProduct != undefined) {
       existProduct.count += 1;
-      existProduct.price = prodPrice * existProduct.count
+      existProduct.price = prodPrice * existProduct.count;
+
+      addAlert.firstElementChild.innerText = `The ${this.parentElement.children[1].innerText} has been added to cart`
+      setInterval(() => {
+        addAlert.classList.add("d-none")
+      }, 4000);
     }
     else {
       products.push({
@@ -120,14 +124,17 @@ cardBtns.forEach(cardBtn => {
     }
     localStorage.setItem("basket", JSON.stringify(products));
 
+    addAlert.classList.remove("d-none");
+    addAlert.firstElementChild.innerText = `The ${this.parentElement.children[1].innerText} has been added to cart`
+    setInterval(() => {
+      addAlert.classList.add("d-none")
+    }, 4000);
+
     getProductsCount();
     getProductsInfo();
-
-    let deleteBtns = document.querySelectorAll(".delete");
-    deleteProductByDeleteIcon(deleteBtns);
+    deleteProductByDeleteIcon();
 
   })
-
 })
 
 function getProductsCount() {
@@ -180,10 +187,11 @@ function total() {
   document.querySelector(".subtotal-price").innerText = `$${sum}.00`;
   document.querySelector(".bottomSubtotal").innerText = `$${sum}.00`;
 }
-let deleteBtns = document.querySelectorAll(".delete");
 
-deleteProductByDeleteIcon(deleteBtns)
-function deleteProductByDeleteIcon(deleteBtns) {
+deleteProductByDeleteIcon()
+function deleteProductByDeleteIcon() {
+  let deleteBtns = document.querySelectorAll(".delete");
+
   deleteBtns.forEach(deleteBtn => {
     deleteBtn.addEventListener("click", function () {
       for (const product of products) {
@@ -193,17 +201,22 @@ function deleteProductByDeleteIcon(deleteBtns) {
             for (const tableBodyElement of tableBody.children) {
               if (tableBodyElement.getAttribute("data-id") == deleteBtn.parentNode.parentNode.getAttribute("data-id")) {
                 tableBodyElement.remove();
-                localStorage.clear();
               }
             }
           }
+
           deleteBtn.parentNode.parentNode.remove();
           getProductsCount();
           total();
           if (products.length == 0) {
-            localStorage.clear();
-            tableArea.classList.add("d-none");
-            msg.classList.remove("d-none");
+            localStorage.removeItem("basket");
+
+            if (tableArea != null) {
+              tableArea.classList.add("d-none");
+            }
+            if (msg != null) {
+              msg.classList.remove("d-none");
+            }
             message.classList.remove("d-none");
             subtotal.classList.add("d-none")
           }
@@ -265,6 +278,68 @@ function decrementCount() {
       }
       localStorage.setItem("basket", JSON.stringify(products))
     })
+  }
+}
+
+
+//wishlist
+let wishlistBtns = document.querySelectorAll('.heart-btn');
+let addAlert = document.querySelector(".add-alert")
+let wishlistProds = []
+if (localStorage.getItem("wishlist") != null) {
+  wishlistProds = JSON.parse(localStorage.getItem("wishlist"))
+}
+
+wishlistBtns.forEach(wishlistBtn => {
+  wishlistBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    wishlistBtn.firstElementChild.className = "fa-solid fa-heart wishlisted"
+
+    let prodImg = wishlistBtn.parentElement.previousElementSibling.firstElementChild.firstElementChild.getAttribute("src")
+    let prodName = wishlistBtn.parentElement.nextElementSibling.children[1].innerText;
+    let prodPrice = wishlistBtn.parentElement.nextElementSibling.children[2].lastElementChild.children[1].innerText;
+    let prodId = parseInt(wishlistBtn.parentNode.parentNode.getAttribute("data-id"))
+    let existProduct = wishlistProds.find(p => p.id == prodId);
+
+    if (existProduct != undefined) {
+      let dbWishlistProducts = wishlistProds.filter(p => p.id != existProduct.id)
+      wishlistProds = dbWishlistProducts;
+      wishlistBtn.firstElementChild.className = "fa-regular fa-heart";
+      
+      addAlert.classList.remove("d-none");
+      addAlert.firstElementChild.innerText = `The ${this.parentElement.nextElementSibling.children[1].innerText} has been deleted from wishlist`
+      setInterval(() => {
+        addAlert.classList.add("d-none")
+      }, 3000);
+
+    }
+    else {
+      addAlert.classList.remove("d-none");
+      addAlert.firstElementChild.innerText = `The ${this.parentElement.nextElementSibling.children[1].innerText} has been added to wishlist`
+      setInterval(() => {
+        addAlert.classList.add("d-none")
+      }, 3000);
+
+      wishlistProds.push({
+        id: prodId,
+        img: prodImg,
+        name: prodName,
+        price: prodPrice,
+      })
+    }
+    localStorage.setItem("wishlist", JSON.stringify(wishlistProds));
+   
+
+  })
+
+})
+for (const icon of wishlistBtns) {
+  for (const prod of wishlistProds) {
+    let dbProd = wishlistProds.find(p => p.id == prod.id);
+      if (dbProd.id == icon.parentElement.parentElement.getAttribute("data-id")) {
+        icon.firstElementChild.className = "fa-solid fa-heart wishlisted"
+      }
   }
 }
 

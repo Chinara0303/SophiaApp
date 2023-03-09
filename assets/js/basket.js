@@ -68,7 +68,6 @@ delBtns.forEach(deleteBtn => {
                     for (const prods of productsInfo.children) {
                         if (prods.getAttribute("data-id") == deleteBtn.parentNode.parentNode.getAttribute("data-id")) {
                             prods.remove();
-                            localStorage.clear();
                         }
                     }
                 }
@@ -104,7 +103,7 @@ function decrement() {
                     quantity.value--;
                     product.count--;
                     product.price = nativePrice * product.count;
-                    this.parentNode.parentNode.parentNode.nextElementSibling.firstChild.innerText = product.price;
+                    this.parentNode.parentNode.parentNode.nextElementSibling.firstChild.innerText =` ${product.price}`;
                     grandTotal();
                     getProductsCount();
                 }
@@ -126,7 +125,7 @@ function increment() {
                     quantity.value++;
                     product.count++;
                     product.price = nativePrice * product.count;
-                    this.parentNode.parentNode.parentNode.nextElementSibling.firstChild.innerText = product.price;
+                    this.parentNode.parentNode.parentNode.nextElementSibling.firstChild.innerText = ` ${product.price}`;
                     grandTotal()
                     getProductsCount()
                 }
