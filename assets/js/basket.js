@@ -1,7 +1,6 @@
-let table = document.querySelector("table");
 let tbody = document.querySelector("tbody");
-let tableArea = document.querySelector(".table-area");
-let msg = document.querySelector(".msg");
+ tableArea = document.querySelector(".table-area");
+ msg = document.querySelector(".msg");
 let productsInfo = document.querySelector(".products-info")
 
 products = JSON.parse(localStorage.getItem("basket"));
@@ -26,7 +25,7 @@ if (products != null) {
                     </div>
                 </div>
             </td>
-            <td><span class="subtotal-price">${product.price}</span></td>
+            <td><span class="subtotal-price">${product.price}.00</span></td>
             <td><i class="fa-solid fa-xmark delete"></i></td>
        </tr>
         `
@@ -84,7 +83,6 @@ delBtns.forEach(deleteBtn => {
             }
         }
     })
-
 })
 let decrementBtns = document.querySelectorAll(".decrement")
 decrement()

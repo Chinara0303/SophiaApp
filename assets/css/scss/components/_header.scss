@@ -37,7 +37,7 @@
             transform: translate(-1000px);
             transition: all .7s;
 
-            .close-icon {
+            .close-iconn {
                 font-size: 24px;
                 color: #f44336;
                 margin: 20px 0 20px 20px;
@@ -316,11 +316,6 @@
         .rigth-area {
             color: white;
 
-            .callback {
-                margin-left: 20px;
-            }
-
-
             .icon {
                 margin-top: 3px;
                 font-size: 26px;
@@ -343,6 +338,7 @@
             .shopping-cart {
                 position: relative;
                 cursor: pointer;
+                margin-right: 40px;
 
                 // &:hover {
                 //     background-color: #222222;

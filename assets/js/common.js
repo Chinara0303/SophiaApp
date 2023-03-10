@@ -44,7 +44,7 @@ $(document).ready(function () {
     $(".overlay").css("display", "block")
   })
 
-  $(document).on("click", ".close-icon", function () {
+  $(document).on("click", ".close-iconn", function () {
     $(".menu").removeClass("active-menu");
     $(".overlay").css("display", "none");
   })
@@ -90,6 +90,10 @@ let prodCount = document.querySelector(".prod-count");
 let subtotal = document.querySelector(".subtotal");
 let modalArea = document.querySelector(".modal-area");
 let tableBody = document.querySelector("tbody");
+
+let tableArea = document.querySelector(".table-area");
+let msg = document.querySelector(".msg");
+
 let products = [];
 if (localStorage.getItem("basket") != null) {
   products = JSON.parse(localStorage.getItem("basket"))
@@ -178,7 +182,6 @@ function getProductsInfo() {
 
   }
 }
-
 function total() {
   let sum = 0;
   for (const product of products) {
