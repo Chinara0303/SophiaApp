@@ -1,6 +1,6 @@
 
 let wishlistProducts = JSON.parse(localStorage.getItem("wishlist"));
-let msg = document.querySelector(".msg");
+ msg = document.querySelector(".msg");
 let wishlistTableArea = document.querySelector(".table-area");
 let table = document.querySelector(".table");
 let tBody = document.querySelector(".table tbody");

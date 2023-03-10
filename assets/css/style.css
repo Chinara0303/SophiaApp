@@ -667,12 +667,19 @@
   }
   .expert .info-area {
     height: 10% !important;
+    margin-top: 0 !important;
   }
   .expert .social-links-area {
     height: 10% !important;
   }
+  #services .items .item {
+    margin-top: 20px !important;
+  }
   #intro .map-area .bottom .inputs-area {
     margin-left: 0 !important;
+  }
+  #intro .intro-area .img-area {
+    width: 100% !important;
   }
   #intro .left-side .info {
     margin-top: 10px !important;
@@ -716,6 +723,12 @@
   }
   .scroll-table-area .table-area {
     width: 200% !important;
+  }
+  .latest-news li {
+    margin-top: 25px;
+  }
+  .latest-news li img {
+    width: 40% !important;
   }
 }
 @media (min-width: 576px) and (max-width: 589px) {
@@ -1474,80 +1487,6 @@ a {
 }
 #vertical-products .box .box-contents .box-content .info .rating i {
   font-size: 12px;
-}
-
-#footer {
-  background-color: #f7f7f7;
-  margin-top: 30px;
-  padding: 50px 0;
-}
-#footer .content .logo {
-  margin-bottom: 10px;
-}
-#footer .content .text {
-  color: #333;
-  font-size: 18px;
-}
-#footer .content .text p {
-  line-height: 24px;
-  margin-bottom: 10px !important;
-}
-#footer .content .text a {
-  color: #333;
-}
-#footer .content .services-content li a {
-  color: #333;
-  font-size: 15px;
-  line-height: 32px;
-}
-#footer .content .inp-btn {
-  margin: 15px 0;
-}
-#footer .content .inp-btn input {
-  margin-bottom: 15px;
-  border: none;
-  height: 49px;
-  padding: 18px;
-  border-radius: 5px;
-  width: 100%;
-  border: 1px solid #ddd;
-  text-align: center;
-}
-#footer .content .inp-btn button {
-  width: 100%;
-  background-color: #EF6C00;
-  padding: 12px;
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-#footer .content .content-bar {
-  display: flex;
-  align-items: center;
-}
-#footer .content .content-bar p {
-  margin-left: 5px !important;
-  font-size: 15px;
-}
-#footer .content .social-links {
-  display: flex;
-  margin-top: 15px;
-}
-#footer .content .social-links li {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  border: 1px solid black;
-  margin-left: 10px;
-  border-radius: 50%;
-}
-#footer .content .social-links li a {
-  color: #222;
-  display: block;
-  margin-top: 2px;
 }
 
 .slick-prev {
@@ -2733,4 +2672,78 @@ form button, .order button {
 .add-alert p {
   color: white;
   font-size: 14px;
+}
+
+#footer {
+  background-color: #f7f7f7;
+  margin-top: 30px;
+  padding: 50px 0;
+}
+#footer .content .logo {
+  margin-bottom: 10px;
+}
+#footer .content .text {
+  color: #333;
+  font-size: 18px;
+}
+#footer .content .text p {
+  line-height: 24px;
+  margin-bottom: 10px !important;
+}
+#footer .content .text a {
+  color: #333;
+}
+#footer .content .services-content li a {
+  color: #333;
+  font-size: 15px;
+  line-height: 32px;
+}
+#footer .content .inp-btn {
+  margin: 15px 0;
+}
+#footer .content .inp-btn input {
+  margin-bottom: 15px;
+  border: none;
+  height: 49px;
+  padding: 18px;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+#footer .content .inp-btn button {
+  width: 100%;
+  background-color: #EF6C00;
+  padding: 12px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+#footer .content .content-bar {
+  display: flex;
+  align-items: center;
+}
+#footer .content .content-bar p {
+  margin-left: 5px !important;
+  font-size: 15px;
+}
+#footer .content .social-links {
+  display: flex;
+  margin-top: 15px;
+}
+#footer .content .social-links li {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid black;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+#footer .content .social-links li a {
+  color: #222;
+  display: block;
+  margin-top: 2px;
 }/*# sourceMappingURL=style.css.map */

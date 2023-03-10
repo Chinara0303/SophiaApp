@@ -1,0 +1,98 @@
+
+#footer {
+    background-color: #f7f7f7;
+    margin-top: 30px;
+    padding: 50px 0;
+
+    .content {
+        .logo {
+            margin-bottom: 10px;
+        }
+
+        .text {
+            color: #333;
+            font-size: 18px;
+
+            p {
+                line-height: 24px;
+                margin-bottom: 10px !important;
+            }
+
+            a {
+                color: #333;
+
+            }
+        }
+
+        .services-content {
+            li {
+                a {
+                    color: #333;
+                    font-size: 15px;
+                    line-height: 32px;
+                }
+            }
+        }
+
+        .inp-btn {
+            margin: 15px 0;
+
+            input {
+                margin-bottom: 15px;
+                border: none;
+                height: 49px;
+                padding: 18px;
+                border-radius: 5px;
+                width: 100%;
+                border: 1px solid #ddd;
+                text-align: center;
+                
+            }
+
+            button {
+                width: 100%;
+                background-color: $nativeColor;
+                padding: 12px;
+                color: white;
+                text-align: center;
+                text-transform: uppercase;
+                border: none;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+        }
+
+        .content-bar {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin-left: 5px !important;
+                font-size: 15px;
+            }
+
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 15px;
+
+            li {
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                border: 1px solid black;
+                margin-left: 10px;
+                border-radius: 50%;
+
+                a {
+                    color: #222;
+                    display: block;
+                    margin-top: 2px;
+                }
+            }
+
+
+        }
+    }
+}
