@@ -28,7 +28,7 @@
 
         .menu {
             background-color: white;
-            position: absolute;
+            position: fixed;
             top: -19px;
             left: -13px;
             width: 250px;
@@ -36,7 +36,7 @@
             z-index: 11;
             transform: translate(-1000px);
             transition: all .7s;
-
+            padding: 10px;
             .close-iconn {
                 font-size: 24px;
                 color: #f44336;

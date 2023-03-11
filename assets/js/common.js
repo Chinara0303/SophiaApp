@@ -3,7 +3,6 @@ $(document).ready(function () {
   $(document).on("click", ".title-currency", function () {
     $(".currency").toggleClass("d-none");
     $(".languages").addClass("d-none");
-    $(".colorless-overlay").css("display", "block")
   })
 
   $(".eur-btn").click(function () {
@@ -21,7 +20,6 @@ $(document).ready(function () {
   $(document).on("click", ".title-lang", function () {
     $(".languages").toggleClass("d-none");
     $(".currency").addClass("d-none");
-    $(".colorless-overlay").css("display", "block")
   })
 
 
@@ -38,6 +36,24 @@ $(document).ready(function () {
     $(".sub-menu").toggleClass("d-none");
   })
 
+  $(document).on("click", function (e) {
+    if (!!!e.target.closest(".title-lang")) {
+      if (!$(".languages").hasClass("d-none"))
+        $(".languages").addClass("d-none")
+    }
+    if (!!!e.target.closest(".title-currency")) {
+      if (!$(".currency").hasClass("d-none"))
+        $(".currency").addClass("d-none")
+    }
+    if (!!!e.target.closest(".last-menu")) {
+      if (!$(".sub-menu").hasClass("d-none"))
+        $(".sub-menu ").addClass("d-none")
+    }
+    if (!!!e.target.closest(".shopping-cart")) {
+      if (!$(".basket-desc-area").hasClass("d-none"))
+        $(".basket-desc-area").addClass("d-none")
+    }
+  })
   //phone-menu
   $(document).on("click", ".open-icon", function () {
     $(".menu").addClass("active-menu");
@@ -52,7 +68,6 @@ $(document).ready(function () {
   //BASKET MODAL
   $(document).on("click", ".shopping-cart", function () {
     $(".basket-desc-area").toggleClass("d-none");
-    $(".colorless-overlay").css("display", "block");
   })
 
   //overlays
@@ -62,13 +77,6 @@ $(document).ready(function () {
     $(".fixed-modal").addClass("d-none");
   })
 
-
-  $(document).on("click", ".colorless-overlay", function () {
-    $(".colorless-overlay").css("display", "none");
-    $(".currency").addClass("d-none");
-    $(".languages").addClass("d-none");
-    $(".basket-desc-area").addClass("d-none");
-  })
   //fixed-modal
   $(document).on("click", ".fixed-modal", function () {
     $(".fixed-modal").addClass("d-none");
@@ -309,7 +317,7 @@ wishlistBtns.forEach(wishlistBtn => {
       let dbWishlistProducts = wishlistProds.filter(p => p.id != existProduct.id)
       wishlistProds = dbWishlistProducts;
       wishlistBtn.firstElementChild.className = "fa-regular fa-heart";
-      
+
       addAlert.classList.remove("d-none");
       addAlert.firstElementChild.innerText = `The ${this.parentElement.nextElementSibling.children[1].innerText} has been deleted from wishlist`
       setInterval(() => {
@@ -332,7 +340,7 @@ wishlistBtns.forEach(wishlistBtn => {
       })
     }
     localStorage.setItem("wishlist", JSON.stringify(wishlistProds));
-   
+
 
   })
 
@@ -340,9 +348,9 @@ wishlistBtns.forEach(wishlistBtn => {
 for (const icon of wishlistBtns) {
   for (const prod of wishlistProds) {
     let dbProd = wishlistProds.find(p => p.id == prod.id);
-      if (dbProd.id == icon.parentElement.parentElement.getAttribute("data-id")) {
-        icon.firstElementChild.className = "fa-solid fa-heart wishlisted"
-      }
+    if (dbProd.id == icon.parentElement.parentElement.getAttribute("data-id")) {
+      icon.firstElementChild.className = "fa-solid fa-heart wishlisted"
+    }
   }
 }
 

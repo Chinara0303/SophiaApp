@@ -101,7 +101,7 @@ function decrement() {
                     quantity.value--;
                     product.count--;
                     product.price = nativePrice * product.count;
-                    this.parentNode.parentNode.parentNode.nextElementSibling.firstChild.innerText =` ${product.price}`;
+                    this.parentNode.parentNode.parentNode.nextElementSibling.firstChild.innerText =` ${product.price}.00`;
                     grandTotal();
                     getProductsCount();
                 }
@@ -123,7 +123,7 @@ function increment() {
                     quantity.value++;
                     product.count++;
                     product.price = nativePrice * product.count;
-                    this.parentNode.parentNode.parentNode.nextElementSibling.firstChild.innerText = ` ${product.price}`;
+                    this.parentNode.parentNode.parentNode.nextElementSibling.firstChild.innerText = ` ${product.price}.00`;
                     grandTotal()
                     getProductsCount()
                 }
