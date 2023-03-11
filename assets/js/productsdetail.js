@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-
-
   let productDetailsInfo = JSON.parse(localStorage.getItem("productDetail"))
   let basket = JSON.parse(localStorage.getItem("basket"));
 

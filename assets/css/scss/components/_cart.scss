@@ -32,8 +32,6 @@
 }
 
 
-
-
 .slick-disabled {
     &::before {
         opacity: 1 !important;
@@ -41,6 +39,14 @@
     }
 }
 
+#products{
+    .slick-slide{
+        width:256px !important;
+    }
+    .slick-track{
+        width: 2048px !important;
+    }
+}
 .cart {
     font-family: $fontFamily;
     box-shadow: 2px 1px 8px -1px rgba(0, 0, 0, .09) !important;

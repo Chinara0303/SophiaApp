@@ -326,6 +326,10 @@
 #center .center-area .rigth-area .basket-desc-area .products-info .heading .delete {
   color: #777;
   cursor: pointer;
+  transition: all 0.4s;
+}
+#center .center-area .rigth-area .basket-desc-area .products-info .heading .delete:hover {
+  color: #EF6C00 !important;
 }
 #center .center-area .rigth-area .basket-desc-area .subtotal {
   padding-top: 15px;
@@ -1628,6 +1632,13 @@ a {
   width: 100px !important;
 }
 
+#products .slick-slide {
+  width: 256px !important;
+}
+#products .slick-track {
+  width: 2048px !important;
+}
+
 .cart {
   font-family: Roboto, Helvetica Neue, sans-serif;
   box-shadow: 2px 1px 8px -1px rgba(0, 0, 0, 0.09) !important;
@@ -1775,6 +1786,8 @@ a {
 }
 #main .table-area tbody .price {
   margin-top: 30px !important;
+  font-weight: 600;
+  font-size: 20px;
 }
 #main .table-area tbody .subtotal-price {
   color: #f33927;

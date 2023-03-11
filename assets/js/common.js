@@ -272,7 +272,6 @@ decrementCount();
 function decrementCount() {
   for (const decrementCountBtn of decrementCountBtns) {
     decrementCountBtn.addEventListener("click", function () {
-      console.log("ddd");
       let quantity = decrementCountBtn.nextElementSibling;
       for (const product of products) {
         if (product.id == this.parentNode.parentNode.parentNode.parentNode.getAttribute("data-id")) {

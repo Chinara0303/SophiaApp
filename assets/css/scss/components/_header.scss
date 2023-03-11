@@ -402,6 +402,10 @@
                         .delete {
                             color: #777;
                             cursor: pointer;
+                            transition: all .4s;
+                            &:hover{
+                                color: $nativeColor !important;
+                            }
                         }
                     }
                     
