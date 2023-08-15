@@ -54,9 +54,11 @@ $(document).ready(function () {
         $(".basket-desc-area").addClass("d-none")
     }
   })
+
   //phone-menu
   $(document).on("click", ".open-icon", function () {
     $(".menu").addClass("active-menu");
+    $(".menu").removeClass("d-none");
     $(".overlay").css("display", "block")
   })
 
@@ -226,6 +228,7 @@ function deleteProductByDeleteIcon() {
               tableArea.classList.add("d-none");
             }
             if (msg != null) {
+              debugger
               msg.classList.remove("d-none");
             }
             message.classList.remove("d-none");
